@@ -8,6 +8,15 @@ module.exports = {
   ],
   theme: {
     extend: {
+      keyframes: {
+        'start': {
+          '0%': { opacity: 0 },
+          '100%': {opacity: 1},
+        }
+      },
+      animation: {
+        'pop-in': 'start 500ms ease-in',
+      },
       colors: {
         primary: {
           100: "#d1d1d1",
