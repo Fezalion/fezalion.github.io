@@ -1,4 +1,5 @@
 import { React, useState } from "react";
+import { NavLink } from "react-router-dom";
 
 function Navbar() {
   const [isNavOpen, setIsNavOpen] = useState(false);
@@ -47,13 +48,13 @@ function Navbar() {
           <div className={isNavOpen ? "block" : "hidden"}>
             <ul className="flex flex-col items-center justify-start min-h-[50px] pb-2 w-full gap-2 absolute top-[66px] right-0 z-31 border-b-2 md:hidden">
               <li className="cursor-pointer">
-                <a href="/">Home</a>
+                <NavLink to="/">Home</NavLink>
               </li>
               <li className="cursor-pointer">
-                <a href="/About">About</a>
+                <NavLink to="/">About</NavLink>
               </li>
               <li className="cursor-pointer">
-                <a href="/Contact">Contact</a>
+                <NavLink to="/">Contact</NavLink>
               </li>
             </ul>
           </div>
@@ -61,13 +62,13 @@ function Navbar() {
 
         <ul className="items-center justify-end hidden w-auto h-16 gap-6 px-8 md:flex">
           <li className="cursor-pointer">
-            <a href="/">Home</a>
+            <NavLink to="/">Home</NavLink>
           </li>
           <li className="cursor-pointer">
-            <a href="/About">About</a>
+            <NavLink to="/">About</NavLink>
           </li>
           <li className="cursor-pointer">
-            <a href="/Contact">Contact</a>
+            <NavLink to="/">Contact</NavLink>
           </li>
         </ul>
       </nav>
