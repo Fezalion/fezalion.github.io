@@ -6,11 +6,11 @@ function Navbar() {
 
   return (
     <>
-      <nav className="fixed top-0 left-0 flex items-start justify-between w-full h-16 p-0 px-16 m-0 border-b-2 group bg-black-500 text-primary-100">
+      <nav className="fixed top-0 left-0 z-10 flex items-start justify-between w-full h-16 p-0 px-16 m-0 border-b-2 group bg-black-500 text-primary-100">
         <div className="flex items-center justify-center w-full h-16 gap-4 px-8 md:justify-start">
           <span className="relative z-20 items-center w-auto">
             Fezalion
-            <span className="absolute opacity-0 group-hover:opacity-100 text-[10px] -rotate-[16deg] -left-6 -top-2 z-19 group-hover:scale-125 transform-gpu transition ease-in delay-75 duration-75">
+            <span className="text-secondary-300 absolute opacity-0 group-hover:opacity-100 text-[10px] -rotate-[16deg] -left-6 -top-2 z-19 group-hover:scale-125 transform-gpu transition ease-in delay-75 duration-75">
               Vite + React &#9829;
             </span>
           </span>
@@ -62,13 +62,19 @@ function Navbar() {
 
         <ul className="items-center justify-end hidden w-auto h-16 gap-6 px-8 md:flex">
           <li className="cursor-pointer">
-            <NavLink to="/">Home</NavLink>
+            <NavLink to="/" className={"hover:text-secondary-500"}>
+              Home
+            </NavLink>
           </li>
           <li className="cursor-pointer">
-            <NavLink to="/About">About</NavLink>
+            <NavLink to="/About" className={"hover:text-secondary-500"}>
+              About
+            </NavLink>
           </li>
           <li className="cursor-pointer">
-            <NavLink to="/">Contact</NavLink>
+            <NavLink to="/" className={"hover:text-secondary-500"}>
+              Contact
+            </NavLink>
           </li>
         </ul>
       </nav>
