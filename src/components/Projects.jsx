@@ -118,7 +118,7 @@ function Projects() {
                 </span>
               </h3>
               <p className="text-gray-400">
-                I love racing games. Something I love more than racing games is drifting in racing games. I hate tuning cars for hours, so I made a tool to help me tune my cars to drift. This was made for <a className="cursor-pointer text-secondary-500" href="https://store.steampowered.com/app/1293830/Forza_Horizon_4/"></a>Forza Horizon 4</a> but abandoned since newer titles came out.
+                I love racing games. Something I love more than racing games is drifting in racing games. I hate tuning cars for hours, so I made a tool to help me tune my cars to drift. This was made for <a className="cursor-pointer text-secondary-500" href="https://store.steampowered.com/app/1293830/Forza_Horizon_4/">Forza Horizon 4</a> but abandoned since newer titles came out.
               </p>
             </article>
           </div>
