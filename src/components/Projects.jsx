@@ -48,7 +48,7 @@ function Projects() {
               </h3>
               <p className="text-gray-400">
                 A discord chat bot coded in <a className="cursor-pointer text-secondary-500" href="https://discordnet.dev/">Discord.NET</a> library, mainly
-                used privately for my own server.
+                used privately in my own server.
               </p>
             </article>
             <article>
