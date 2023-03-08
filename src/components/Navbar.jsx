@@ -65,7 +65,7 @@ function Navbar() {
             <NavLink to="/">Home</NavLink>
           </li>
           <li className="cursor-pointer">
-            <NavLink to="/">About</NavLink>
+            <NavLink to="/About">About</NavLink>
           </li>
           <li className="cursor-pointer">
             <NavLink to="/">Contact</NavLink>
