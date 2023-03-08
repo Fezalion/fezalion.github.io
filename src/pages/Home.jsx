@@ -1,11 +1,13 @@
 import Hero from '../components/Hero.jsx'
+import Projects from '../components/Projects.jsx'
 
 function Home() {
   return (
     <>
-      <section className="flex w-auto h-auto min-h-[500px] mx-16 md:mx-32 lg:mx-64 top-20 relative px-8 pt-8 z-0">
+      <main className="relative z-0 grid w-auto min-h-screen grid-flow-row grid-cols-1 px-8 mx-4 mt-16 md:mx-8 lg:mx-16">
         <Hero />
-      </section>
+        <Projects />
+      </main>
     </>
   );
 }
