@@ -7,7 +7,7 @@ function Navbar() {
   return (
     <>
       <header>
-        <nav className="border-b border-secondary-700 px-4 lg:px-6 py-2.5 bg-primary-500 fixed top-0 left-0 w-full z-50">
+        <nav className="border-b border-secondary-700 px-4 lg:px-6 py-2.5 bg-primary-500 fixed top-0 left-0 w-full z-40">
           <div className="flex flex-wrap items-center justify-between max-w-screen-xl mx-auto">
             <a href="#" className="flex items-center">
               <img

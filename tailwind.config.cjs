@@ -16,6 +16,7 @@ module.exports = {
       },
       animation: {
         'pop-in': 'start 500ms ease-in',
+        'pop-out': 'start 500ms ease-in reverse',
       },
       colors: {
         primary: {
