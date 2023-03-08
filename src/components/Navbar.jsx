@@ -7,7 +7,7 @@ function Navbar() {
   return (
     <>
       <header>
-        <nav className="border-b border-secondary-700 px-4 lg:px-6 py-2.5 bg-primary-500">
+        <nav className="border-b border-secondary-700 px-4 lg:px-6 py-2.5 bg-primary-500 fixed top-0 left-0 w-full z-50">
           <div className="flex flex-wrap items-center justify-between max-w-screen-xl mx-auto">
             <a href="#" className="flex items-center">
               <img
@@ -20,10 +20,10 @@ function Navbar() {
               </span>
             </a>
 
-            <div class="flex items-center lg:order-2">
+            <div className="flex items-center lg:order-2">
               <a
                 href="https://github.com/fezalion/"
-                class="text-white bg-primary-700 hover:bg-primary-800 font-medium rounded-lg text-sm px-2 lg:px-2 py-2 lg:py-2 mr-2"
+                className="text-white bg-primary-700 hover:bg-primary-800 font-medium rounded-lg text-sm px-2 lg:px-2 py-2 lg:py-2 mr-2"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -37,7 +37,7 @@ function Navbar() {
               </a>
               <a
                 href="#"
-                class="text-white bg-primary-700 hover:bg-primary-800 font-medium rounded-lg text-sm px-2 lg:px-2 py-2 lg:py-2 mr-2"
+                className="text-white bg-primary-700 hover:bg-primary-800 font-medium rounded-lg text-sm px-2 lg:px-2 py-2 lg:py-2 mr-2"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
