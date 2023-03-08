@@ -7,7 +7,7 @@ function Projects() {
         <div className="z-0 px-4 pb-8 mx-auto max-w-screen-2xl sm:pb-16 lg:px-6">
           <div className="max-w-screen-md mb-8 lg:mb-16">
             <h2 className="mb-4 text-4xl font-extrabold tracking-tight text-primary-100">
-              I do play games a lot, and sometimes code my own tools.
+              I do play games a lot, and sometimes code my own tools for the games I play.
             </h2>
             <p className="text-gray-500 sm:text-xl">
               Here you can see some of the repos I use, or code myself.
