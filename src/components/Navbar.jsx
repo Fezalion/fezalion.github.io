@@ -10,9 +10,6 @@ function Navbar() {
         <div className="flex items-center justify-center w-full h-16 gap-4 px-8 md:justify-start">
           <span className="relative z-20 items-center w-auto">
             Fezalion
-            <span className="text-secondary-500 absolute opacity-0 group-hover:opacity-100 text-[10px] -rotate-[16deg] -left-6 -top-2 z-19 group-hover:scale-125 transform-gpu transition ease-in delay-75 duration-75">
-              Vite + React &#9829;
-            </span>
           </span>
         </div>
 
