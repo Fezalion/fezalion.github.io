@@ -1,3 +1,7 @@
+import React, { useEffect } from "react";
+import { useAnimation, motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+
 import Hero from '../components/Hero.jsx'
 import Projects from '../components/Projects.jsx'
 import About from '../components/About.jsx'
