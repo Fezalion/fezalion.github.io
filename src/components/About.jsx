@@ -1,12 +1,7 @@
 import React, { useEffect } from "react";
 import { useAnimation, motion, easeIn } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-
-const animationVariants = {
-    hiddenright: { transform: "translateX(25%)", opacity: 0 },
-    hiddenleft: { transform: "translateX(-25%)", opacity: 0 },
-    visible: { transform: "translateX(0%)", opacity: 1, transition: { duration: 0.5, easeIn }}
-}
+import animationVariants from '../globals/Animations.jsx'
 
 function About() {
   const controls = useAnimation();

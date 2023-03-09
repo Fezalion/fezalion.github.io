@@ -12,31 +12,11 @@ module.exports = {
         'start': {
           '0%': { opacity: 0 },
           '100%': {opacity: 1},
-        },
-        'slide-from-left': {
-          '0%': { transform: 'translateX(-25%)', opacity: 0 },
-          '100%': { transform: 'translateX(0%)', opacity: 1 },
-        },
-        'slide-from-right': {
-          '0%': { transform: 'translateX(25%)', opacity: 0 },
-          '100%': { transform: 'translateX(0%)', opacity: 1 },
-        },
-        'slide-from-up': {
-          '0%': { transform: 'translateY(-25%)', opacity: 0 },
-          '100%': { transform: 'translateX(0%)', opacity: 1 },
-        },
-        'slide-from-down': {
-          '0%': { transform: 'translateY(25%)', opacity: 0 },
-          '100%': { transform: 'translateX(0%)', opacity: 1 },
         }
       },
       animation: {
         'pop-in': 'start 500ms ease-in',
         'pop-out': 'start 500ms ease-in reverse',
-        'slide-from-left': 'slide-from-left 500ms ease-in',
-        'slide-from-right': 'slide-from-right 500ms ease-in',
-        'slide-from-up': 'slide-from-up 500ms ease-in',
-        'slide-from-down': 'slide-from-down 500ms ease-in',
       },
       colors: {
         primary: {
