@@ -18,6 +18,17 @@ body::-webkit-scrollbar {
   width: 0px;
   background: transparent; /* Disable scrollbar Chrome/Safari/Webkit */
 }
+
+html {
+  background: rgb(26, 26, 26);
+  background: linear-gradient(
+    -45deg,
+    rgba(26, 26, 26, 1) 0%,
+    rgba(16, 16, 16, 1) 50%,
+    rgba(5, 5, 5, 1) 100%
+  );
+}
+
 /*
 html {
   background-position: 0% 0%, 0px 64px;

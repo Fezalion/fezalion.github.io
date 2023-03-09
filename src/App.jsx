@@ -7,7 +7,7 @@ const Home = React.lazy(() => import("./pages/Home.jsx"));
 
 function App() {
   return (
-    <div className="relative h-auto bg-primary-600">
+    <div className="relative h-auto">
       <Suspense fallback={<div className="z-50 flex justify-center w-screen h-screen fixed top-0 left-0 bg-primary-600 text-center text-secondary-300 animate-pop-out">
           <span className="flex self-center">
             <Triangle
