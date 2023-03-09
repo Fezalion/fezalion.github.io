@@ -55,7 +55,7 @@ function Hero() {
           </motion.span>
         </motion.h1>
         <motion.p
-          className="mb-8 text-lg font-normal text-gray-500 lg:text-xl sm:px-16 xl:px-48 animate-pop-in"
+          className="mb-8 text-lg font-normal text-gray-500 lg:text-xl sm:px-16 xl:px-48"
           ref={ref}
           initial="hiddenright"
           animate={controls}
