@@ -18,3 +18,59 @@ body::-webkit-scrollbar {
   width: 0px;
   background: transparent; /* Disable scrollbar Chrome/Safari/Webkit */
 }
+/*
+html {
+  background-position: 0% 0%, 0px 64px;
+  background-repeat: repeat, repeat;
+  background-attachment: scroll, scroll;
+  background-image: linear-gradient(
+      135deg,
+      #151515 21px,
+      #0a0a0a 22px,
+      #0a0a0a 24px,
+      transparent 24px,
+      transparent 67px,
+      #0a0a0a 67px,
+      #0a0a0a 69px,
+      transparent 69px
+    ),
+    linear-gradient(
+      225deg,
+      #151515 21px,
+      #0a0a0a 22px,
+      #0a0a0a 24px,
+      transparent 24px,
+      transparent 67px,
+      #0a0a0a 67px,
+      #0a0a0a 69px,
+      transparent 69px
+    );
+  background-origin: padding-box, padding-box;
+  background-clip: border-box, border-box;
+  background-color: #151515;
+  background-size: 64px 128px;
+  --darkreader-inline-bgimage: linear-gradient(
+      135deg,
+      #596673 21px,
+      #232627 22px,
+      #232627 24px,
+      rgba(0, 0, 0, 0) 24px,
+      rgba(0, 0, 0, 0) 67px,
+      #232627 67px,
+      #232627 69px,
+      rgba(0, 0, 0, 0) 69px
+    ),
+    linear-gradient(
+      225deg,
+      #596673 21px,
+      #232627 22px,
+      #232627 24px,
+      rgba(0, 0, 0, 0) 24px,
+      rgba(0, 0, 0, 0) 67px,
+      #232627 67px,
+      #232627 69px,
+      rgba(0, 0, 0, 0) 69px
+    );
+  --darkreader-inline-bgcolor: #596673;
+}
+*/

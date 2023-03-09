@@ -29,7 +29,7 @@ function Hero() {
   }, [controls, inView]);
   return (
     <>
-      <section className="z-0 h-auto max-w-screen-xl px-4 mx-auto text-center lg:min-h-screen lg:pb-8 lg:py-16 lg:px-12">
+      <section className="z-0 h-auto min-w-full max-w-screen-xl w-auto px-4 mx-auto text-center lg:min-h-screen lg:pb-8 lg:py-16 lg:px-12">
         <motion.h1
           className="mb-4 mt-32 lg:mt-64 text-4xl font-extrabold tracking-tight leading-none text-primary-100 md:text-4xl xl:text-6xl"
           ref={ref}
