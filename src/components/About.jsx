@@ -1,35 +1,57 @@
 import React, { useEffect } from "react";
 import { useAnimation, motion, easeIn } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import animationVariants from '../globals/Animations.jsx'
+import animationVariants from "../globals/Animations.jsx";
+
+const container = {
+  hidden: { opacity: 0 },
+  show: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.2,
+      when: "beforeChildren",
+      delay: 0.5,
+    },
+  },
+};
+
+const item = {
+  hidden: { opacity: 0 },
+  show: { opacity: 1 },
+};
 
 function About() {
   const controls = useAnimation();
   const [ref, inView] = useInView();
   useEffect(() => {
     if (inView) {
-      controls.start("visible");
+      controls.start("show");
     }
   }, [controls, inView]);
   return (
     <>
-      <motion.section className="z-0 h-auto max-w-screen-xl px-4 mx-auto text-center lg:min-h-screen lg:pb-8 lg:py-16 lg:px-12"
+      <motion.section
+        className="z-0 h-auto max-w-screen-xl px-4 mx-auto text-center lg:min-h-screen lg:pb-8 lg:py-16 lg:px-12"
         ref={ref}
         initial="hidden"
         animate={controls}
-        variants={animationVariants}
+        variants={container}
       >
         <div className="grid max-w-screen-xl px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12">
-          <motion.div className="mr-auto place-self-center lg:col-span-7 text-left"
+          <motion.div
+            className="mr-auto place-self-center lg:col-span-7 text-left"
             ref={ref}
-            initial="hiddenleft"
+            initial="hidden"
             animate={controls}
-            variants={animationVariants}
+            variants={container}
           >
             <h1 className="max-w-2xl mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl text-primary-100">
               About Me
             </h1>
-            <p className="max-w-2xl mb-6 font-light text-gray-500 lg:mb-8 md:text-lg lg:text-xl">
+            <motion.p
+              className="max-w-2xl mb-6 font-light text-gray-500 lg:mb-8 md:text-lg lg:text-xl"
+              variants={item}
+            >
               I live in Turkey, I feel like i am 30 years old and probably am. I
               like coding and coffee, I have a cute kitten. I used to play
               piano, nowadays I just listen or goof around in DAWs. I enjoy a
@@ -41,15 +63,15 @@ function About() {
                 spotify
               </a>
               .
-            </p>
+            </motion.p>
           </motion.div>
 
           <motion.div
             className="hidden lg:mt-0 lg:col-span-5 lg:flex"
             ref={ref}
-            initial="hiddenright"
+            initial="hidden"
             animate={controls}
-            variants={animationVariants}
+            variants={container}
           >
             <img
               src="https://placehold.jp/3d4070/ffffff/600x600.png"

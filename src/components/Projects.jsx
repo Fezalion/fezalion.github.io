@@ -1,15 +1,30 @@
 import React, { useEffect, useState } from "react";
 import { useAnimation, motion, easeIn } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import animationVariants from '../globals/Animations.jsx'
 
+const container = {
+  hidden: { opacity: 0 },
+  show: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.2,
+      when: "beforeChildren",
+      delay: 0.2,
+    },
+  },
+};
+
+const item = {
+  hidden: { opacity: 0 },
+  show: { opacity: 1 },
+};
 
 function Projects() {
   const controls = useAnimation();
   const [ref, inView] = useInView();
   useEffect(() => {
     if (inView) {
-      controls.start("visible");
+      controls.start("show");
     }
   }, [controls, inView]);
 
@@ -17,27 +32,30 @@ function Projects() {
     <>
       <section className="mt-64 lg:pb-32 lg:pt-0 lg:mt-0">
         <div className="z-0 px-4 pb-8 mx-auto max-w-screen-2xl sm:pb-16 lg:px-6">
-          <motion.div className="max-w-screen-md mb-8 lg:mb-16"
-          ref={ref}
-          initial="hiddenleft"
-          animate={controls}
-          variants={animationVariants}
+          <motion.div
+            className="max-w-screen-md mb-8 lg:mb-16"
+            ref={ref}
+            variants={container}
+            initial="hidden"
+            animate={controls}
           >
             <h2 className="mb-4 text-4xl font-extrabold tracking-tight text-primary-100">
-              I do play games a lot, and sometimes code my own tools for the games I play.
+              I do play games a lot, and sometimes code my own tools for the
+              games I play.
             </h2>
             <p className="text-gray-500 sm:text-xl">
               Here you can see some of the repos I use, or code myself.
             </p>
           </motion.div>
 
-          <div className="space-y-8 md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-12 md:space-y-0">
-            <motion.article
-              ref={ref}
-              initial="hiddenleft"
-              animate={controls}
-              variants={animationVariants}
-            >
+          <motion.div
+            className="space-y-8 md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-12 md:space-y-0"
+            ref={ref}
+            variants={container}
+            initial="hidden"
+            animate={controls}
+          >
+            <motion.article variants={item}>
               <div className="flex items-center justify-center w-10 h-10 mb-4 rounded-full bg-primary-800 lg:h-12 lg:w-12">
                 <svg
                   className="w-5 h-5 text-secondary-600 lg:w-6 lg:h-6"
@@ -69,16 +87,17 @@ function Projects() {
                 </span>
               </h3>
               <p className="text-gray-400">
-                A discord chat bot coded in <a className="cursor-pointer text-secondary-500" href="https://discordnet.dev/">Discord.NET</a> library, mainly
-                used privately in my own server.
+                A discord chat bot coded in{" "}
+                <a
+                  className="cursor-pointer text-secondary-500"
+                  href="https://discordnet.dev/"
+                >
+                  Discord.NET
+                </a>{" "}
+                library, mainly used privately in my own server.
               </p>
             </motion.article>
-            <motion.article
-              ref={ref}
-              initial="hiddendown"
-              animate={controls}
-              variants={animationVariants}
-            >
+            <motion.article variants={item}>
               <div className="flex items-center justify-center w-10 h-10 mb-4 rounded-full bg-primary-800 lg:h-12 lg:w-12">
                 <svg
                   className="w-5 h-5 text-secondary-600 lg:w-6 lg:h-6"
@@ -110,15 +129,11 @@ function Projects() {
                 </span>
               </h3>
               <p className="text-gray-400">
-                Keyboard operated switch menu coded in C#, mainly used for personal highschool projects and abandoned since graduation.
+                Keyboard operated switch menu coded in C#, mainly used for
+                personal highschool projects and abandoned since graduation.
               </p>
             </motion.article>
-            <motion.article
-              ref={ref}
-              initial="hiddenright"
-              animate={controls}
-              variants={animationVariants}
-            >
+            <motion.article variants={item}>
               <div className="flex items-center justify-center w-10 h-10 mb-4 rounded-full bg-primary-800 lg:h-12 lg:w-12">
                 <svg
                   className="w-5 h-5 text-secondary-600 lg:w-6 lg:h-6"
@@ -150,10 +165,19 @@ function Projects() {
                 </span>
               </h3>
               <p className="text-gray-400">
-                I love racing games. Something I love more than racing games is drifting in racing games. I hate tuning cars for hours, so I made a tool to help me tune my cars to drift. This was made for <a className="cursor-pointer text-secondary-500" href="https://store.steampowered.com/app/1293830/Forza_Horizon_4/">Forza Horizon 4</a> but abandoned since newer titles came out.
+                I love racing games. Something I love more than racing games is
+                drifting in racing games. I hate tuning cars for hours, so I
+                made a tool to help me tune my cars to drift. This was made for{" "}
+                <a
+                  className="cursor-pointer text-secondary-500"
+                  href="https://store.steampowered.com/app/1293830/Forza_Horizon_4/"
+                >
+                  Forza Horizon 4
+                </a>{" "}
+                but abandoned since newer titles came out.
               </p>
             </motion.article>
-          </div>
+          </motion.div>
         </div>
       </section>
     </>
