@@ -37,7 +37,7 @@ function Hero() {
           animate={controls}
           variants={animationVariants}
         >
-          Hello, I'm
+          Hello, I'm{" "}
           <motion.span
             className="text-secondary-500"
             variants={container}
