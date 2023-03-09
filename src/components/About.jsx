@@ -49,7 +49,7 @@ function About() {
               About Me
             </h1>
             <motion.p
-              className="max-w-2xl mb-6 font-light text-gray-500 lg:mb-8 md:text-lg lg:text-xl"
+              className="max-w-2xl mb-6 font-light text-gray-500 lg:pr-4 lg:mb-8 md:text-lg lg:text-xl"
               variants={item}
             >
               I live in Turkey, I feel like i am 30 years old and probably am. I
