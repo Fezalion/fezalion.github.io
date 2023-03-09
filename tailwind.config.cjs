@@ -1,4 +1,5 @@
 /** @type {import('tailwindcss').Config} */
+const defaultTheme = require('tailwindcss/defaultTheme')
 
 module.exports = {
   content: [
@@ -20,7 +21,7 @@ module.exports = {
         'pop-out': 'start 500ms ease-in reverse',
       },
       fontFamily: {
-        sans: ['Inter var'],
+        sans: ['Inter var', ...defaultTheme.fontFamily.sans],
       },
       colors: {
         primary: {
