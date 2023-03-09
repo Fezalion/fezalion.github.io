@@ -19,6 +19,9 @@ module.exports = {
         'pop-in': 'start 500ms ease-in',
         'pop-out': 'start 500ms ease-in reverse',
       },
+      fontFamily: {
+        sans: ['Inter var'],
+      },
       colors: {
         primary: {
           100: "#d1d1d1",
