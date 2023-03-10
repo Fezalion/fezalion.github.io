@@ -71,6 +71,7 @@ function Projects() {
                   FezBotRedux
                   <a
                     className="absolute scale-75 top-1 -right-6"
+                    target="_blank"
                     href="https://github.com/Fezalion/FezBotRedux"
                   >
                     <svg
@@ -90,6 +91,7 @@ function Projects() {
                 A discord chat bot coded in{" "}
                 <a
                   className="cursor-pointer text-secondary-500"
+                  target="_blank"
                   href="https://discordnet.dev/"
                 >
                   Discord.NET
@@ -113,6 +115,7 @@ function Projects() {
                   ConsoleMenuGeneric
                   <a
                     className="absolute scale-75 top-1 -right-6"
+                    target="_blank"
                     href="https://github.com/Fezalion/ConsoleMenuGeneric"
                   >
                     <svg
@@ -149,6 +152,7 @@ function Projects() {
                   ForzaTuneHelper
                   <a
                     className="absolute scale-75 top-1 -right-6"
+                    target="_blank"
                     href="https://github.com/Fezalion/ForzaTuneHelper"
                   >
                     <svg
@@ -170,6 +174,7 @@ function Projects() {
                 made a tool to help me tune my cars to drift. This was made for{" "}
                 <a
                   className="cursor-pointer text-secondary-500"
+                  target="_blank"
                   href="https://store.steampowered.com/app/1293830/Forza_Horizon_4/"
                 >
                   Forza Horizon 4

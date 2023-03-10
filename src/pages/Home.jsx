@@ -2,7 +2,6 @@ import React from "react";
 
 import Hero from "../components/Hero.jsx";
 import Projects from "../components/Projects.jsx";
-import About from "../components/AboutPage.jsx";
 
 function Home() {
   return (
