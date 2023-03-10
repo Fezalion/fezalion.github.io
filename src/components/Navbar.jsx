@@ -12,7 +12,7 @@ function Navbar() {
       <header>
         <nav className="border-b border-secondary-700 px-4 lg:px-6 py-2.5 bg-primary-500 fixed top-0 left-0 w-full z-40">
           <div className="flex flex-wrap items-center justify-between max-w-screen-xl mx-auto">
-            <a href="#" className="flex items-center">
+            <NavLink to="/" className="flex items-center">
               <img
                 src="https://placehold.jp/3d4070/ffffff/60x60.png"
                 className="h-6 mr-3 sm:h-9"
@@ -21,7 +21,7 @@ function Navbar() {
               <span className="self-center text-xl font-semibold whitespace-nowrap text-primary-100">
                 Fezalion
               </span>
-            </a>
+            </NavLink>
 
             <div className="flex items-center lg:order-2">
               <a
