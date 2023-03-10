@@ -27,6 +27,8 @@ html {
     rgba(16, 16, 16, 1) 50%,
     rgba(5, 5, 5, 1) 100%
   );
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 /*
