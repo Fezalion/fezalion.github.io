@@ -7,7 +7,7 @@ const Footer = React.lazy(() => import("./components/Footer.jsx"));
 
 function Layout() {
   return (
-    <div className="relative h-auto overflow-hidden">
+    <div className="relative h-auto min-h-screen">
       <Suspense
         fallback={
           <div className="fixed top-0 left-0 z-50 flex justify-center w-screen h-screen text-center bg-primary-600 text-secondary-300">
