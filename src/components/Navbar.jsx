@@ -1,6 +1,12 @@
-import { React} from "react";
+import { React } from "react";
+import { Outlet, NavLink } from "react-router-dom";
 
-function Navbar() { 
+function Navbar() {
+  const activeLinkStyle =
+    "transition-colors text-secondary-300 hover:text-secondary-600";
+  const normalLinkStyle =
+    "transition-colors text-primary-100 hover:text-secondary-600";
+
   return (
     <>
       <header>
@@ -20,7 +26,7 @@ function Navbar() {
             <div className="flex items-center lg:order-2">
               <a
                 href="https://github.com/fezalion/"
-                className="text-white bg-primary-700 hover:bg-primary-800 font-medium rounded-lg text-sm px-2 lg:px-2 py-2 lg:py-2 mr-2"
+                className="px-2 py-2 mr-2 text-sm font-medium text-white rounded-lg bg-primary-700 hover:bg-primary-800 lg:px-2 lg:py-2"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -34,7 +40,7 @@ function Navbar() {
               </a>
               <a
                 href="#"
-                className="text-white bg-primary-700 hover:bg-primary-800 font-medium rounded-lg text-sm px-2 lg:px-2 py-2 lg:py-2 mr-2"
+                className="px-2 py-2 mr-2 text-sm font-medium text-white rounded-lg bg-primary-700 hover:bg-primary-800 lg:px-2 lg:py-2"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -45,35 +51,30 @@ function Navbar() {
                 >
                   <path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z" />
                 </svg>
-              </a>              
+              </a>
             </div>
 
-            <div className="items-center justify-between hidden w-full lg:w-auto lg:order-1">
-              <ul className="flex flex-col mt-4 font-medium lg:flex-row lg:space-x-8 lg:mt-0">
-                <li>
-                  <a className="block py-2 pl-3 pr-4 text-primary-100 hover:text-secondary-500 lg:p-0">
+            <div className="flex items-center lg:w-auto lg:order-1">
+              <ul className="flex flex-row px-2 py-2 mr-2 space-x-8 text-xs rounded-lg bg-primary-700 lg:text-base lg:bg-transparent lg:rounded-none lg:font-medium lg:flex-row lg:space-x-4 lg:mt-0">
+                <li className="cursor-pointer ">
+                  <NavLink
+                    to="/"
+                    className={({ isActive }) =>
+                      isActive ? activeLinkStyle : normalLinkStyle
+                    }
+                  >
                     Home
-                  </a>
+                  </NavLink>
                 </li>
-                <li>
-                  <a className="block py-2 pl-3 pr-4 text-primary-100 hover:text-secondary-500 lg:p-0">
-                    Home
-                  </a>
-                </li>
-                <li>
-                  <a className="block py-2 pl-3 pr-4 text-primary-100 hover:text-secondary-500 lg:p-0">
-                    Home
-                  </a>
-                </li>
-                <li>
-                  <a className="block py-2 pl-3 pr-4 text-primary-100 hover:text-secondary-500 lg:p-0">
-                    Home
-                  </a>
-                </li>
-                <li>
-                  <a className="block py-2 pl-3 pr-4 text-primary-100 hover:text-secondary-500 lg:p-0">
-                    Home
-                  </a>
+                <li className="cursor-pointer">
+                  <NavLink
+                    to="/about"
+                    className={({ isActive }) =>
+                      isActive ? activeLinkStyle : normalLinkStyle
+                    }
+                  >
+                    About
+                  </NavLink>
                 </li>
               </ul>
             </div>

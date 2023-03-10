@@ -9,7 +9,6 @@ const container = {
     transition: {
       staggerChildren: 0.2,
       when: "beforeChildren",
-      delay: 1,
     },
   },
 };
@@ -19,7 +18,7 @@ const item = {
   show: { opacity: 1 },
 };
 
-function About() {
+function AboutPage() {
   const controls = useAnimation();
   const [ref, inView] = useInView();
   useEffect(() => {
@@ -30,7 +29,7 @@ function About() {
   return (
     <>
       <motion.section
-        className="z-0 h-auto max-w-screen-xl px-4 mx-auto text-center lg:min-h-screen lg:pb-8 lg:py-16 lg:px-12"
+        className="relative z-0 grid content-center w-auto h-auto min-w-full min-h-screen px-4 mx-auto text-center lg:min-h-screen lg:pb-8 lg:py-16 lg:px-12"
         ref={ref}
         initial="hidden"
         animate={controls}
@@ -38,13 +37,13 @@ function About() {
       >
         <div className="grid max-w-screen-xl px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12">
           <motion.div
-            className="mr-auto place-self-center lg:col-span-7 text-left"
+            className="mr-auto text-left place-self-center lg:col-span-7"
             ref={ref}
             initial="hidden"
             animate={controls}
             variants={container}
           >
-            <h1 className="max-w-2xl mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl text-primary-100">
+            <h1 className="max-w-2xl mb-4 text-4xl font-extrabold leading-none tracking-tight md:text-5xl xl:text-6xl text-primary-100">
               About Me
             </h1>
             <motion.p
@@ -83,4 +82,4 @@ function About() {
   );
 }
 
-export default About;
+export default AboutPage;

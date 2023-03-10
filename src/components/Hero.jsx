@@ -1,15 +1,19 @@
 import React, { useEffect, useRef } from "react";
 import { useAnimation, motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-
+//todo: maybe a better animation idk man
 const animationVariants = {
   hiddenright: { transform: "translateX(25%)", opacity: 0 },
   hiddenleft: { transform: "translateX(-25%)", opacity: 0 },
   hiddenup: { transform: "translateY(-25%)", opacity: 0 },
   hiddendown: { transform: "translateY(25%)", opacity: 0 },
   hidden: { opacity: 0 },
-  visible: { transform: "translateX(0%)", opacity: 1, transition: { duration: 0.5, ease: [0.5, 1, 0.89, 1] }},    
-}
+  visible: {
+    transform: "translateX(0%)",
+    opacity: 1,
+    transition: { duration: 0.5, ease: [0.5, 1, 0.89, 1] },
+  },
+};
 
 const container = {
   hidden: { opacity: 0 },
@@ -17,7 +21,7 @@ const container = {
     opacity: 1,
     transition: {
       staggerChildren: 0.1,
-      when: 'beforeChildren'
+      when: "beforeChildren",
     },
   },
 };
@@ -37,9 +41,9 @@ function Hero() {
   }, [controls, inView]);
   return (
     <>
-      <section className="z-0 relative h-auto min-w-full w-auto px-4 mx-auto text-center grid content-center min-h-screen">
+      <section className="relative z-0 grid content-center w-auto h-auto min-w-full min-h-screen px-4 mx-auto text-center">
         <motion.h1
-          className="text-2xl font-extrabold tracking-tight leading-none text-primary-100 md:text-4xl xl:text-6xl"
+          className="text-2xl font-extrabold leading-none tracking-tight text-primary-100 md:text-4xl xl:text-6xl"
           ref={ref}
           initial="hiddenleft"
           animate={controls}
@@ -70,7 +74,7 @@ function Hero() {
           variants={animationVariants}
         >
           I make coffee into code.
-        </motion.p>        
+        </motion.p>
       </section>
     </>
   );

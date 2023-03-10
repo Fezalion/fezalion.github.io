@@ -2,12 +2,17 @@
 const defaultTheme = require('tailwindcss/defaultTheme')
 
 module.exports = {
+  variants: {
+    extend: {
+      textColor: ['active'],
+    }
+  },
   content: [
     "./index.html",
     "./src/components/*.{js,ts,jsx,tsx}",
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
-  theme: {
+  theme: {    
     extend: {
       keyframes: {
         'start': {
@@ -21,7 +26,7 @@ module.exports = {
       },
       fontFamily: {
         sans: ['Inter var', ...defaultTheme.fontFamily.sans],
-      },
+      },      
       colors: {
         primary: {
           100: "#d1d1d1",

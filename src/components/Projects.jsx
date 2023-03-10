@@ -30,8 +30,8 @@ function Projects() {
 
   return (
     <>
-      <section className="mt-64 lg:pb-32 lg:pt-0 lg:mt-0">
-        <div className="z-0 px-4 pb-8 mx-auto max-w-screen-2xl sm:pb-16 lg:px-6">
+      <section className="relative z-0 grid content-center w-auto h-auto min-w-full min-h-screen px-4 mx-auto">
+        <div className="z-0 px-4 mx-auto mb-16 max-w-screen-2xl sm:pb-16 lg:px-6 lg:mb-0">
           <motion.div
             className="max-w-screen-md mb-8 lg:mb-16"
             ref={ref}
@@ -49,7 +49,7 @@ function Projects() {
           </motion.div>
 
           <motion.div
-            className="space-y-8 md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-12 md:space-y-0"
+            className="grid space-y-8 md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-12 md:space-y-0"
             ref={ref}
             variants={container}
             initial="hidden"
