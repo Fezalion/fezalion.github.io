@@ -1,10 +1,9 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-import Hero from "../components/Hero.jsx";
-import Projects from "../components/Projects.jsx";
+import About from "../components/About.jsx";
 
-function Home() {
+function AboutPage() {
   return (
     <>
       <motion.main
@@ -13,11 +12,10 @@ function Home() {
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
       >
-        <Hero />
-        <Projects />
+        <About />
       </motion.main>
     </>
   );
 }
 
-export default Home;
+export default AboutPage;

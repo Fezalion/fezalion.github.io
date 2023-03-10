@@ -18,7 +18,7 @@ const item = {
   show: { opacity: 1 },
 };
 
-function AboutPage() {
+function About() {
   const controls = useAnimation();
   const [ref, inView] = useInView();
   useEffect(() => {
@@ -82,4 +82,4 @@ function AboutPage() {
   );
 }
 
-export default AboutPage;
+export default About;
