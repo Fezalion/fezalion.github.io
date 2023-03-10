@@ -27,7 +27,7 @@ function Navbar() {
               <a
                 href="https://github.com/fezalion/"
                 target="_blank"
-                className="px-2 py-2 mr-2 text-sm font-medium text-white rounded-lg bg-primary-700 hover:bg-primary-800 lg:px-2 lg:py-2"
+                className="px-2 py-2 mr-2 text-sm font-medium text-white rounded-lg lg:px-2 lg:py-2"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -42,7 +42,7 @@ function Navbar() {
               <a
                 href="https://www.youtube.com/channel/UC37naG7PQg393xMT34i1wZg"
                 target="_blank"
-                className="px-2 py-2 mr-2 text-sm font-medium text-white rounded-lg bg-primary-700 hover:bg-primary-800 lg:px-2 lg:py-2"
+                className="px-2 py-2 mr-2 text-sm font-medium text-white rounded-lg lg:px-2 lg:py-2"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"

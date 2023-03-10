@@ -1,32 +1,32 @@
 /** @type {import('tailwindcss').Config} */
-const defaultTheme = require('tailwindcss/defaultTheme')
+const defaultTheme = require("tailwindcss/defaultTheme");
 
 module.exports = {
   variants: {
     extend: {
-      textColor: ['active'],
-    }
+      textColor: ["active"],
+    },
   },
   content: [
     "./index.html",
     "./src/components/*.{js,ts,jsx,tsx}",
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
-  theme: {    
+  theme: {
     extend: {
       keyframes: {
-        'start': {
-          '0%': { opacity: 0 },
-          '100%': {opacity: 1},
-        }
+        start: {
+          "0%": { opacity: 0 },
+          "100%": { opacity: 1 },
+        },
       },
       animation: {
-        'pop-in': 'start 500ms ease-in',
-        'pop-out': 'start 500ms ease-in reverse',
+        "pop-in": "start 500ms ease-in",
+        "pop-out": "start 500ms ease-in reverse",
       },
       fontFamily: {
-        sans: ['Inter var', ...defaultTheme.fontFamily.sans],
-      },      
+        sans: ["Inter var", ...defaultTheme.fontFamily.sans],
+      },
       colors: {
         primary: {
           100: "#d1d1d1",
@@ -39,8 +39,20 @@ module.exports = {
           800: "#0a0a0a",
           900: "#050505",
         },
-        
+
         secondary: {
+          100: "#ffe5cc",
+          200: "#ffca99",
+          300: "#ffb066",
+          400: "#ff9533",
+          500: "#ff7b00",
+          600: "#cc6200",
+          700: "#994a00",
+          800: "#663100",
+          900: "#331900"
+},
+
+        secondary2: {
           100: "#ffccff",
           200: "#ff99ff",
           300: "#ff66ff",
@@ -49,8 +61,8 @@ module.exports = {
           600: "#cc00cc",
           700: "#990099",
           800: "#660066",
-          900: "#330033"
-},
+          900: "#330033",
+        },
 
         tertiary: {
           100: "#f9e1d2",
@@ -62,11 +74,9 @@ module.exports = {
           700: "#863e13",
           800: "#5a290d",
           900: "#2d1506",
-        },        
+        },
       },
     },
   },
-  plugins: [
-    require('tailwind-scrollbar-hide'),
-  ],
+  plugins: [require("tailwind-scrollbar-hide")],
 };
