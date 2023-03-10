@@ -1,7 +1,15 @@
-import React, { useEffect } from "react";
-import { useAnimation, motion, easeIn } from "framer-motion";
+import React, { useEffect, useRef } from "react";
+import { useAnimation, motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import animationVariants from "../globals/Animations.jsx";
+
+const animationVariants = {
+  hiddenright: { transform: "translateX(25%)", opacity: 0 },
+  hiddenleft: { transform: "translateX(-25%)", opacity: 0 },
+  hiddenup: { transform: "translateY(-25%)", opacity: 0 },
+  hiddendown: { transform: "translateY(25%)", opacity: 0 },
+  hidden: { opacity: 0 },
+  visible: { transform: "translateX(0%)", opacity: 1, transition: { duration: 0.5, ease: [0.5, 1, 0.89, 1] }},    
+}
 
 const container = {
   hidden: { opacity: 0 },
@@ -29,9 +37,9 @@ function Hero() {
   }, [controls, inView]);
   return (
     <>
-      <section className="z-0 h-auto min-w-full max-w-screen-xl w-auto px-4 mx-auto text-center lg:min-h-screen lg:pb-8 lg:py-16 lg:px-12">
+      <section className="z-0 relative h-auto min-w-full w-auto px-4 mx-auto text-center grid content-center min-h-screen">
         <motion.h1
-          className="mb-4 mt-32 lg:mt-64 text-4xl font-extrabold tracking-tight leading-none text-primary-100 md:text-4xl xl:text-6xl"
+          className="text-2xl font-extrabold tracking-tight leading-none text-primary-100 md:text-4xl xl:text-6xl"
           ref={ref}
           initial="hiddenleft"
           animate={controls}
@@ -62,7 +70,7 @@ function Hero() {
           variants={animationVariants}
         >
           I make coffee into code.
-        </motion.p>
+        </motion.p>        
       </section>
     </>
   );

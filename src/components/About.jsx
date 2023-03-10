@@ -1,7 +1,6 @@
 import React, { useEffect } from "react";
-import { useAnimation, motion, easeIn } from "framer-motion";
+import { useAnimation, motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import animationVariants from "../globals/Animations.jsx";
 
 const container = {
   hidden: { opacity: 0 },
@@ -10,7 +9,7 @@ const container = {
     transition: {
       staggerChildren: 0.2,
       when: "beforeChildren",
-      delay: 0.5,
+      delay: 1,
     },
   },
 };

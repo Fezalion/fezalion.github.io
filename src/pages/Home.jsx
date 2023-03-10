@@ -1,6 +1,4 @@
-import React, { useEffect } from "react";
-import { useAnimation, motion } from "framer-motion";
-import { useInView } from "react-intersection-observer";
+import React from "react";
 
 import Hero from '../components/Hero.jsx'
 import Projects from '../components/Projects.jsx'
@@ -9,7 +7,7 @@ import About from '../components/About.jsx'
 function Home() {
   return (
     <>
-      <main className="relative z-0 grid w-auto min-h-screen grid-flow-row grid-cols-1 mt-0 px-8 mx-4 md:mx-8 lg:mx-16 animate-pop-in">
+      <main className="relative z-0 grid w-auto min-h-screen grid-flow-row grid-cols-1 mt-0 px-8 mx-4 md:mx-8 lg:mx-16 animate-pop-in">       
         <Hero />
         <Projects />
         <About />
