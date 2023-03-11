@@ -32,7 +32,7 @@ function About() {
     <>
       <section className="relative z-0 grid content-center w-auto h-auto min-w-full min-h-screen px-4 mx-auto text-center lg:min-h-screen lg:pb-8 lg:py-16 lg:px-12">
         <motion.article
-          className="items-center max-w-screen-xl gap-8 px-4 py-8 mx-auto xl:gap-16 md:grid md:grid-cols-2 sm:py-16 lg:px-6"
+          className="items-center max-w-screen-xl gap-8 px-4 py-8 mx-auto xl:gap-16 md:grid md:grid-cols-2 sm:py-16 lg:px-6 snap-center"
           ref={ref}
           initial="hidden"
           animate={controls}
@@ -58,7 +58,7 @@ function About() {
           </motion.div>
         </motion.article>
         <motion.article
-          className="items-center max-w-screen-xl gap-8 px-4 py-8 mx-auto xl:gap-16 md:grid md:grid-cols-2 sm:py-16 lg:px-6"
+          className="items-center max-w-screen-xl gap-8 px-4 py-8 mx-auto xl:gap-16 md:grid md:grid-cols-2 sm:py-16 lg:px-6 snap-center"
           ref={ref}
           initial="hidden"
           animate={controls}

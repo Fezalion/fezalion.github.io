@@ -8,7 +8,7 @@ function Home() {
   return (
     <>
       <motion.main
-        className="relative z-0 grid w-full grid-flow-row grid-cols-1 mt-0"
+        className="relative z-0 grid w-full grid-flow-row grid-cols-1 mt-0 snap-y snap-mandatory"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}

@@ -3,13 +3,14 @@ import { useAnimation, motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 //todo: maybe a better animation idk man
 const animationVariants = {
-  hiddenright: { transform: "translateX(25%)", opacity: 0 },
-  hiddenleft: { transform: "translateX(-25%)", opacity: 0 },
-  hiddenup: { transform: "translateY(-25%)", opacity: 0 },
-  hiddendown: { transform: "translateY(25%)", opacity: 0 },
+  come_from_right: { x: 500, opacity: 0 },
+  come_from_left: { x:-500, opacity: 0 },
+  come_from_up: { y:-500, opacity: 0 },
+  come_from_down: { y:500, opacity: 0 },
   hidden: { opacity: 0 },
   visible: {
-    transform: "translateX(0%)",
+    x:0,
+    y:0,
     opacity: 1,
     transition: { duration: 0.5, ease: [0.5, 1, 0.89, 1] },
   },
@@ -29,8 +30,8 @@ const container = {
 };
 
 const item = {
-  hidden: { opacity: 0 },
-  show: { opacity: 1 },
+  hidden: { opacity: 0, x: 500, },
+  show: { opacity: 1, x: 0 },
 };
 
 function Hero() {
@@ -43,12 +44,12 @@ function Hero() {
   }, [controls, inView]);
   return (
     <>
-      <section className="relative z-0 grid content-center w-auto h-auto min-w-full min-h-screen mx-auto text-center">
+      <section className="relative z-0 grid content-center w-auto h-auto min-w-full min-h-screen mx-auto text-center snap-center">
         <div className="w-auto h-auto min-w-full py-32">
           <motion.h1
             className="text-2xl font-extrabold leading-none tracking-tight text-primary-100 md:text-4xl xl:text-6xl"
             ref={ref}
-            initial="hiddenleft"
+            initial="come_from_left"
             animate={controls}
             variants={animationVariants}
           >
@@ -88,7 +89,7 @@ function Hero() {
           <motion.p
             className="mt-8 text-lg font-normal text-gray-500 lg:text-xl sm:px-16 xl:px-48"
             ref={ref}
-            initial="hiddenright"
+            initial="come_from_right"
             animate={controls}
             variants={animationVariants}
           >

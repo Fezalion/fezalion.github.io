@@ -30,7 +30,7 @@ function Projects() {
 
   return (
     <>
-      <section className="relative z-0 grid content-center w-full h-auto min-w-full px-8 pt-16 mx-auto mb-48">
+      <section className="relative z-0 grid content-center w-full h-auto min-w-full px-8 pt-16 mx-auto mb-48 snap-center">
         <div className="z-0 px-4 mx-auto mb-16 max-w-screen-2xl sm:pb-16 lg:px-6 lg:mb-0">
           <motion.div
             className="max-w-screen-md mb-8 lg:mb-16"
