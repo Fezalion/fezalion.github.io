@@ -1,6 +1,5 @@
-import React, { useEffect } from "react";
-import { useAnimation, motion } from "framer-motion";
-import { useInView } from "react-intersection-observer";
+import React from "react";
+import { motion } from "framer-motion";
 
 const container = {
   hidden: { opacity: 0 },
@@ -20,24 +19,15 @@ const item = {
 };
 
 function Projects() {
-  const controls = useAnimation();
-  const [ref, inView] = useInView();
-  useEffect(() => {
-    if (inView) {
-      controls.start("show");
-    }
-  }, [controls, inView]);
-
   return (
     <>
-      <section className="relative z-0 grid content-center w-full h-auto min-w-full px-8 pt-16 mx-auto mb-48 snap-center">
-        <div className="z-0 px-4 mx-auto mb-16 max-w-screen-2xl sm:pb-16 lg:px-6 lg:mb-0">
+      <section className="relative z-0 grid content-center w-auto h-auto min-w-full min-h-screen mx-auto mt-16 text-center snap-center lg:mt-0 lg:text-left">
+        <div className="z-0 px-4 mx-auto max-w-screen-2xl sm:pb-16 lg:px-6 lg:mb-0">
           <motion.div
             className="max-w-screen-md mb-8 lg:mb-16"
-            ref={ref}
             variants={container}
             initial="hidden"
-            animate={controls}
+            animate="show"
           >
             <h2 className="mb-4 text-4xl font-extrabold tracking-tight text-primary-100">
               I do play games a lot, and sometimes code my own tools for the
@@ -49,11 +39,10 @@ function Projects() {
           </motion.div>
 
           <motion.div
-            className="grid space-y-8 md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-12 md:space-y-0"
-            ref={ref}
+            className="grid space-y-8 text-left md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-12 md:space-y-0"
             variants={container}
             initial="hidden"
-            animate={controls}
+            animate="show"
           >
             <motion.article variants={item}>
               <div className="flex items-center justify-center w-10 h-10 mb-4 rounded-full bg-primary-800 lg:h-12 lg:w-12">

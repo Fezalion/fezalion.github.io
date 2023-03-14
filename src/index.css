@@ -8,6 +8,9 @@
     scrollbar-width: none;
   }
 }
+html {
+  scroll-behavior: smooth;
+}
 body {
   margin: 0; /* remove default margin */
   scrollbar-width: none; /* Also needed to disable scrollbar Firefox */

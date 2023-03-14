@@ -3,7 +3,7 @@ import ReactDOM from "react-dom/client";
 import { BrowserRouter } from "react-router-dom";
 import "./index.css";
 
-import AnimatedRoutes from "./components/AnimatedRoutes";
+import AnimatedRoutes from "./pages/AnimatedRoutes";
 
 export default function App() {
   return (

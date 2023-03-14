@@ -10,7 +10,7 @@ function Layout() {
     <div className="relative h-auto min-h-screen">
       <Suspense
         fallback={
-          <div className="fixed top-0 left-0 z-50 flex justify-center w-screen h-screen text-center bg-primary-600 text-secondary-300">
+          <div className="fixed top-0 left-0 z-50 flex justify-center w-screen h-screen bg-primary-600 text-secondary-300">
             <span className="flex self-center">
               <Triangle
                 height="120"
