@@ -34,13 +34,18 @@ const item = {
   show: { opacity: 1, x: 0 },
 };
 
-function Hero() {  
+function Hero() {
   return (
     <>
-      <section className="relative z-0 grid content-center w-auto h-auto min-w-full min-h-screen mx-auto text-center snap-center">        
+      <motion.section
+        className="relative z-0 grid content-center w-auto h-auto min-w-full min-h-screen mx-auto text-center snap-center"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+      >
         <div className="w-auto h-auto min-w-full py-32">
           <motion.h1
-            className="text-2xl font-extrabold leading-none tracking-tight text-primary-100 md:text-4xl xl:text-6xl"            
+            className="text-2xl font-extrabold leading-none tracking-tight text-primary-100 md:text-4xl xl:text-6xl"
             initial="come_from_left"
             animate="visible"
             variants={animationVariants}
@@ -79,7 +84,7 @@ function Hero() {
             </motion.span>
           </motion.h1>
           <motion.p
-            className="mt-8 text-lg font-normal text-gray-500 lg:text-xl sm:px-16 xl:px-48"            
+            className="mt-8 text-lg font-normal text-gray-500 lg:text-xl sm:px-16 xl:px-48"
             initial="come_from_right"
             animate="visible"
             variants={animationVariants}
@@ -87,7 +92,7 @@ function Hero() {
             I make coffee into code.
           </motion.p>
         </div>
-      </section>
+      </motion.section>
     </>
   );
 }

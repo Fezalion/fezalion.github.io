@@ -21,7 +21,12 @@ const item = {
 function Projects() {
   return (
     <>
-      <section className="relative z-0 grid content-center w-auto h-auto min-w-full min-h-screen mx-auto mt-16 text-center snap-center lg:mt-0 lg:text-left">
+      <motion.section
+        className="relative z-0 grid content-center w-auto h-auto min-w-full min-h-screen mx-auto mt-16 text-center snap-center lg:mt-0 lg:text-left"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+      >
         <div className="z-0 px-4 mx-auto max-w-screen-2xl sm:pb-16 lg:px-6 lg:mb-0">
           <motion.div
             className="max-w-screen-md mb-8 lg:mb-16"
@@ -173,7 +178,7 @@ function Projects() {
             </motion.article>
           </motion.div>
         </div>
-      </section>
+      </motion.section>
     </>
   );
 }

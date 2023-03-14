@@ -2,8 +2,6 @@ import React, { useEffect } from "react";
 import { useAnimation, motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 
-
-
 const container = {
   hidden: { opacity: 0 },
   show: {
@@ -30,7 +28,12 @@ function About() {
   }, [controls, inView]);
   return (
     <>
-      <section className="relative z-0 grid content-center w-auto h-auto min-w-full min-h-screen px-4 mx-auto text-center lg:min-h-screen lg:pb-8 lg:py-16 lg:px-12">
+      <motion.section
+        className="relative z-0 grid content-center w-auto h-auto min-w-full min-h-screen px-4 mx-auto text-center lg:min-h-screen lg:pb-8 lg:py-16 lg:px-12"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+      >
         <motion.article
           className="items-center max-w-screen-xl gap-8 px-4 py-8 mx-auto xl:gap-16 md:grid md:grid-cols-2 sm:py-16 lg:px-6 snap-center"
           ref={ref}
@@ -83,7 +86,7 @@ function About() {
             variants={item}
           />
         </motion.article>
-      </section>
+      </motion.section>
     </>
   );
 }
