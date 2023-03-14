@@ -10,20 +10,15 @@ function Navbar() {
   return (
     <>
       <header>
-        <nav className="border-b border-secondary-700 px-4 lg:px-6 py-2.5 bg-primary-700 fixed top-0 left-0 w-full z-40">
+        <nav className="border-b border-secondary-700 px-4 py-2.5 bg-primary-700 fixed top-0 left-0 min-w-full w-auto z-40 h-16">
           <div className="flex flex-wrap items-center justify-between max-w-screen-xl mx-auto">
-            <NavLink to="/" className="flex items-center">
-              <img
-                src="https://placehold.jp/3d4070/ffffff/60x60.png"
-                className="h-6 mr-3 sm:h-9"
-                alt="Logo"
-              />
+            <NavLink to="/" className="flex items-center">              
               <span className="self-center text-xl font-semibold whitespace-nowrap text-primary-100">
                 Fezalion
               </span>
             </NavLink>
 
-            <div className="flex items-center lg:order-2">
+            <div className="flex items-center order-2">
               <a
                 href="https://github.com/fezalion/"
                 target="_blank"
@@ -56,9 +51,9 @@ function Navbar() {
               </a>
             </div>
 
-            <div className="flex items-center lg:w-auto lg:order-1">
-              <ul className="flex flex-row px-2 py-2 mr-2 space-x-8 text-xs rounded-lg bg-primary-700 lg:text-base lg:bg-transparent lg:rounded-none lg:font-medium lg:flex-row lg:space-x-4 lg:mt-0">
-                <li className="cursor-pointer ">
+            <div className="flex items-center order-1 w-auto h-full">
+              <ul className="flex flex-row px-2 mr-2 space-x-8 text-xs bg-primary-700 lg:text-base lg:bg-transparent lg:font-medium lg:mt-0">
+                <li className="cursor-pointer">
                   <NavLink
                     to="/"
                     className={({ isActive }) =>

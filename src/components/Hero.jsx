@@ -38,7 +38,7 @@ function Hero() {
   return (
     <>
       <motion.section
-        className="relative z-0 grid content-center w-auto h-auto min-w-full min-h-screen mx-auto text-center snap-center"
+        className="relative z-0 grid content-center w-auto h-auto min-w-full min-h-screen mx-auto overflow-hidden text-center snap-center"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
