@@ -47,9 +47,9 @@ html::before {
   left: 0;
   background-attachment: fixed;
   background: rgb(26, 26, 26);
-  background: linear-gradient(-45deg, #220022, #330033, #550055, #330033, #220022);
+  background: linear-gradient(-45deg, #1a1a1a, #1a1a1a, #550055, #1a1a1a, #1a1a1a);
   background-size: 400% 400%;
-  animation: gradient 10s ease infinite;
+  animation: gradient 15s ease infinite;
   background-repeat: no-repeat;
   mask-image: url("./assets/circuit-board.svg");
 }
