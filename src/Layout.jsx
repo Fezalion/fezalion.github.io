@@ -6,17 +6,30 @@ const Navbar = React.lazy(() => import("./components/Navbar.jsx"));
 const Footer = React.lazy(() => import("./components/Footer.jsx"));
 
 function Layout() {
+  function lerp(start, end, amt) {
+    return (1 - amt) * start + amt * end;
+  }
+
   useEffect(() => {
+    var clientX = -500, clientY = -500;
+    var newX = -500, newY = -500;
     const updateMousePos = (ev) => {
-      const { clientX, clientY } = ev;
-      document.documentElement.style.setProperty("--x", `${clientX}px`);
-      document.documentElement.style.setProperty("--y", `${clientY}px`);
+      clientX = ev.clientX;
+      clientY = ev.clientY;
     };
+
+    var interval = setInterval(() => {
+      newX = lerp(newX, clientX, 0.2);
+      newY = lerp(newY, clientY, 0.2);
+      document.documentElement.style.setProperty("--x", `${newX}px`);
+      document.documentElement.style.setProperty("--y", `${newY}px`);
+    }, 1000 / 30);
 
     window.addEventListener("mousemove", updateMousePos);
 
     return () => {
       window.removeEventListener("mousemove", updateMousePos);
+      clearInterval(interval);
     };
   }, []);
 
