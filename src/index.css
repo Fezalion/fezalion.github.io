@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --x:0;
+  --y:0;
+}
+
+
 @-moz-document url-prefix() {
   /* Disable scrollbar Firefox */
   html {
@@ -36,7 +42,7 @@ html {
 */
 
 html {
-  background: rgb(26, 26, 26);
+  background: #101010;
 }
 html::before {
   content: "";
@@ -49,7 +55,7 @@ html::before {
   background: radial-gradient(
     circle farthest-side at var(--x) var(--y),
     #550055 0%,
-    transparent 100%
+    transparent 75%
   );
   mask-image: url("./assets/circuit-board.svg");
 }
