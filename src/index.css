@@ -55,7 +55,7 @@ html::before {
   background: radial-gradient(
     circle farthest-side at var(--x) var(--y),
     #550055 0%,
-    transparent 75%
+    transparent 50%
   );
   mask-image: url("./assets/circuit-board.svg");
 }
