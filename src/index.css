@@ -3,10 +3,9 @@
 @tailwind utilities;
 
 :root {
-  --x:0;
-  --y:0;
+  --x: -500;
+  --y: -500;
 }
-
 
 @-moz-document url-prefix() {
   /* Disable scrollbar Firefox */
@@ -53,9 +52,19 @@ html::before {
   left: 0;
   background-attachment: fixed;
   background: radial-gradient(
-    circle farthest-side at var(--x) var(--y),
+    circle at var(--x) var(--y),
     #550055 0%,
-    transparent 50%
+    transparent 30%
   );
-  mask-image: url("./assets/circuit-board.svg");
+  mask-image: url("./assets/hexagons.svg");
+  animation: FADE-IN 5s infinite;
+}
+
+@keyframes FADE-IN {
+  0%, 100% {
+    opacity: 0.4;
+  }
+  50% {
+    opacity: 1;
+  }
 }
