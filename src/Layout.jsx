@@ -1,4 +1,4 @@
-import React, { Suspense } from "react";
+import React, { Suspense, useEffect } from "react";
 import { Triangle } from "react-loader-spinner";
 import { Outlet } from "react-router-dom";
 
@@ -6,6 +6,20 @@ const Navbar = React.lazy(() => import("./components/Navbar.jsx"));
 const Footer = React.lazy(() => import("./components/Footer.jsx"));
 
 function Layout() {
+  useEffect(() => {
+    const updateMousePos = (ev) => {
+      const { clientX, clientY } = ev;
+      document.documentElement.style.setProperty("--x", `${clientX}px`);
+      document.documentElement.style.setProperty("--y", `${clientY}px`);
+    };
+
+    window.addEventListener("mousemove", updateMousePos);
+
+    return () => {
+      window.removeEventListener("mousemove", updateMousePos);
+    };
+  }, []);
+
   return (
     <div className="relative h-auto min-h-screen">
       <Suspense

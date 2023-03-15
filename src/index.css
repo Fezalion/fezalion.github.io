@@ -46,22 +46,10 @@ html::before {
   top: 0;
   left: 0;
   background-attachment: fixed;
-  background: rgb(26, 26, 26);
-  background: linear-gradient(-45deg, #1a1a1a, #1a1a1a, #550055, #1a1a1a, #1a1a1a);
-  background-size: 400% 400%;
-  animation: gradient 15s ease infinite;
-  background-repeat: no-repeat;
+  background: radial-gradient(
+    circle farthest-side at var(--x) var(--y),
+    #550055 0%,
+    transparent 100%
+  );
   mask-image: url("./assets/circuit-board.svg");
-}
-
-@keyframes gradient {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
 }
