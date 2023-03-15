@@ -56,8 +56,8 @@ html::before {
     #550055 0%,
     transparent 30%
   );
-  mask-image: url("./assets/hexagons.svg");
-  animation: FADE-IN 5s infinite;
+  mask-image: url("./assets/topography.svg");
+  animation: FADE-IN 12s infinite ease-in-out;
 }
 
 @keyframes FADE-IN {
