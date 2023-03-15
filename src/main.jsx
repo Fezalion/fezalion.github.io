@@ -11,8 +11,10 @@ export default function App() {
   }
 
   useEffect(() => {
-    var clientX = 0, clientY = 0;
-    var newX = 0, newY = 0;
+    var clientX = 0,
+      clientY = 0;
+    var newX = 0,
+      newY = 0;
     const updateMousePos = (ev) => {
       clientX = ev.clientX;
       clientY = ev.clientY;

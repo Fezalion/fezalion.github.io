@@ -38,12 +38,12 @@ function Hero() {
   return (
     <>
       <motion.section
-        className="relative z-0 grid content-center w-auto h-auto min-w-full min-h-screen mx-auto overflow-hidden text-center snap-center"
+        className="relative z-0 mx-auto grid h-auto min-h-screen w-auto min-w-full snap-center content-center overflow-hidden text-center"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
       >
-        <div className="w-auto h-auto min-w-full py-32">
+        <div className="h-auto w-auto min-w-full py-32">
           <motion.h1
             className="text-2xl font-extrabold leading-none tracking-tight text-primary-100 md:text-4xl xl:text-6xl"
             initial="come_from_left"
@@ -84,7 +84,7 @@ function Hero() {
             </motion.span>
           </motion.h1>
           <motion.p
-            className="mt-8 text-lg font-normal text-gray-500 lg:text-xl sm:px-16 xl:px-48"
+            className="mt-8 text-lg font-normal text-gray-500 sm:px-16 lg:text-xl xl:px-48"
             initial="come_from_right"
             animate="visible"
             variants={animationVariants}

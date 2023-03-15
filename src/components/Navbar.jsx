@@ -10,19 +10,19 @@ function Navbar() {
   return (
     <>
       <header>
-        <nav className="border-b border-secondary-700 px-4 py-2.5 bg-primary-700 fixed top-0 left-0 min-w-full w-auto z-40 h-16">
-          <div className="flex flex-wrap items-center justify-between max-w-screen-xl mx-auto">
-            <NavLink to="/" className="flex items-center">              
-              <span className="self-center text-xl font-semibold whitespace-nowrap text-primary-100">
+        <nav className="fixed top-0 left-0 z-40 h-16 w-auto min-w-full border-b border-secondary-700 bg-primary-700 px-4 py-2.5">
+          <div className="mx-auto flex max-w-screen-xl flex-wrap items-center justify-between">
+            <NavLink to="/" className="flex items-center">
+              <span className="self-center whitespace-nowrap text-xl font-semibold text-primary-100">
                 Fezalion
               </span>
             </NavLink>
 
-            <div className="flex items-center order-2">
+            <div className="order-2 flex items-center">
               <a
                 href="https://github.com/fezalion/"
                 target="_blank"
-                className="px-2 py-2 mr-2 text-sm font-medium text-white rounded-lg lg:px-2 lg:py-2"
+                className="mr-2 rounded-lg px-2 py-2 text-sm font-medium text-white lg:px-2 lg:py-2"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -37,7 +37,7 @@ function Navbar() {
               <a
                 href="https://www.youtube.com/channel/UC37naG7PQg393xMT34i1wZg"
                 target="_blank"
-                className="px-2 py-2 mr-2 text-sm font-medium text-white rounded-lg lg:px-2 lg:py-2"
+                className="mr-2 rounded-lg px-2 py-2 text-sm font-medium text-white lg:px-2 lg:py-2"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -51,8 +51,8 @@ function Navbar() {
               </a>
             </div>
 
-            <div className="flex items-center order-1 w-auto h-full">
-              <ul className="flex flex-row px-2 mr-2 space-x-8 text-xs bg-primary-700 lg:text-base lg:bg-transparent lg:font-medium lg:mt-0">
+            <div className="order-1 flex h-full w-auto items-center">
+              <ul className="mr-2 flex flex-row space-x-8 bg-primary-700 px-2 text-xs lg:mt-0 lg:bg-transparent lg:text-base lg:font-medium">
                 <li className="cursor-pointer">
                   <NavLink
                     to="/"
