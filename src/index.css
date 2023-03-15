@@ -3,8 +3,8 @@
 @tailwind utilities;
 
 :root {
-  --x: -500;
-  --y: -500;
+  --x: 0;
+  --y: 0;
 }
 
 @-moz-document url-prefix() {

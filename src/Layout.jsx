@@ -11,8 +11,8 @@ function Layout() {
   }
 
   useEffect(() => {
-    var clientX = -500, clientY = -500;
-    var newX = -500, newY = -500;
+    var clientX = 1024, clientY = 0;
+    var newX = 1024, newY = 0;
     const updateMousePos = (ev) => {
       clientX = ev.clientX;
       clientY = ev.clientY;
