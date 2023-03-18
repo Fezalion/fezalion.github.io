@@ -1,6 +1,23 @@
 import React from "react";
 import { motion } from "framer-motion";
 
+const container = {
+  hidden: { opacity: 0 },
+  show: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.1,
+      when: "beforeChildren",
+      delay: 0.1,
+    },
+  },
+};
+
+const item = {
+  hidden: { opacity: 0 },
+  show: { opacity: 1 },
+};
+
 const Dict = [
   [
     "C#",
@@ -57,9 +74,17 @@ function About() {
               Over the years I self thougth myself on skills I intend to use,
               and I still try learn and use new technologies
             </p>
-            <div className="my-4 grid grid-flow-row grid-cols-1 lg:grid-cols-2">
+            <motion.div
+              className="my-4 grid grid-flow-row grid-cols-1 lg:grid-cols-2"
+              variants={container}
+              initial="hidden"
+              animate="show"
+            >
               {Dict.map((x, i) => (
-                <div className="flex flex-row gap-2 p-4 text-white">
+                <motion.div
+                  className="flex flex-row gap-2 p-4 text-white"
+                  variants={item}
+                >
                   <img
                     src="https://placehold.jp/150x200.png"
                     className={`${i % 2 == 0 ? "order-3" : "order-none"}`}
@@ -84,9 +109,9 @@ function About() {
                       </div>
                     </span>
                   </div>
-                </div>
+                </motion.div>
               ))}
-            </div>
+            </motion.div>
           </div>
         </motion.div>
       </motion.section>
