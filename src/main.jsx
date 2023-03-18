@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useLayoutEffect } from "react";
 import ReactDOM from "react-dom/client";
 import { BrowserRouter } from "react-router-dom";
 import "./index.css";
@@ -10,7 +10,7 @@ export default function App() {
     return (1 - amt) * start + amt * end;
   }
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     var clientX = 0,
       clientY = 0;
     var newX = 0,
