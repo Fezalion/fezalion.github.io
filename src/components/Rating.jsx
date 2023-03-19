@@ -2,6 +2,8 @@ import React, { useState } from "react";
 
 function Rating(props) {
   const rating = props.rate;
+  const bgColor = props.bgCol;
+  const fgColor = props.fgCol;
   return (
     <>
       {[...Array(10)].map((star, index) => {
@@ -9,9 +11,7 @@ function Rating(props) {
         return (
           <div
             key={index}
-            className={`${
-              index <= rating ? "bg-secondary-600" : "bg-primary-400"
-            } w-8 p-1`}
+            className={`${index <= rating ? fgColor : bgColor} w-8 p-1`}
           ></div>
         );
       })}

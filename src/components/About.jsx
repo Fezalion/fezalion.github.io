@@ -60,7 +60,11 @@ function About() {
                     {skill.name}
                   </span>
                   <div className="flex w-full -skew-x-[24deg] flex-row gap-2">
-                    <Rating rate={skill.score} />
+                    <Rating
+                      rate={skill.score}
+                      fgCol={"bg-secondary-500"}
+                      bgCol={"bg-primary-400"}
+                    />
                   </div>
                 </div>
               </div>
