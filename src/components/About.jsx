@@ -18,42 +18,13 @@ const item = {
   show: { opacity: 1 },
 };
 
-const Dict = [
-  [
-    "C#",
-    "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ab accusamus, quo doloremque laboriosam cupiditate debitis omnis sit quis suscipit odio dolor ducimus esse eos eligendi impedit sed libero eaque blanditiis?",
-    75,
-  ],
-  [
-    "JS",
-    "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ab accusamus, quo doloremque laboriosam cupiditate debitis omnis sit quis suscipit odio dolor ducimus esse eos eligendi impedit sed libero eaque blanditiis?",
-    50,
-  ],
-  [
-    "Photoshop",
-    "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ab accusamus, quo doloremque laboriosam cupiditate debitis omnis sit quis suscipit odio dolor ducimus esse eos eligendi impedit sed libero eaque blanditiis?",
-    70,
-  ],
-  [
-    "Video Editing",
-    " Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ab accusamus, quo doloremque laboriosam cupiditate debitis omnis sit quis suscipit odio dolor ducimus esse eos eligendi impedit sed libero eaque blanditiis?",
-    55,
-  ],
-  [
-    "a",
-    " Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ab accusamus, quo doloremque laboriosam cupiditate debitis omnis sit quis suscipit odio dolor ducimus esse eos eligendi impedit sed libero eaque blanditiis?",
-    50,
-  ],
-  [
-    "b",
-    " Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ab accusamus, quo doloremque laboriosam cupiditate debitis omnis sit quis suscipit odio dolor ducimus esse eos eligendi impedit sed libero eaque blanditiis?",
-    60,
-  ],
-  [
-    "c",
-    " Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ab accusamus, quo doloremque laboriosam cupiditate debitis omnis sit quis suscipit odio dolor ducimus esse eos eligendi impedit sed libero eaque blanditiis?",
-    70,
-  ],
+const skills = [
+  { name: "C#", score: 25 },
+  { name: "C#", score: 35 },
+  { name: "C#", score: 45 },
+  { name: "C#", score: 55 },
+  { name: "C#", score: 65 },
+  { name: "C#", score: 75 },
 ];
 
 function About() {
@@ -66,52 +37,38 @@ function About() {
         exit={{ opacity: 0 }}
       >
         <motion.div className="my-auto mx-auto max-h-screen min-h-fit w-full max-w-screen-xl pt-32 text-primary-100">
-          <div className="w-full p-4 sm:p-6">
-            <h5 className="mb-3 text-base font-semibold text-primary-100 md:text-xl">
-              My skills
-            </h5>
-            <p className="text-sm font-normal text-gray-500">
-              Over the years I self thougth myself on skills I intend to use,
-              and I still try learn and use new technologies
+          <div className="mb-20 text-center">
+            <h1 className="title-font mb-4 text-3xl font-medium text-white sm:text-4xl">
+              Skills &amp; Technologies
+            </h1>
+            <p className="mx-auto text-base leading-relaxed lg:w-3/4 xl:w-2/4">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nisi sit
+              ipsa delectus eum quo voluptas aspernatur accusantium distinctio
+              possimus est.
             </p>
-            <motion.div
-              className="my-4 grid grid-flow-row grid-cols-1 lg:grid-cols-2"
-              variants={container}
-              initial="hidden"
-              animate="show"
-            >
-              {Dict.map((x, i) => (
-                <motion.div
-                  className="flex flex-row gap-2 p-4 text-white"
-                  variants={item}
-                >
-                  <img
-                    src="https://placehold.jp/150x200.png"
-                    className={`${i % 2 == 0 ? "order-3" : "order-none"}`}
-                  ></img>
-                  <div
-                    className={`flex w-full flex-col justify-start gap-2 ${
-                      i % 2 == 0 ? "text-right" : "text-left"
-                    }`}
+          </div>
+          <div className="-mx-2 flex flex-wrap sm:mx-auto sm:mb-2 lg:w-4/5">
+            {skills.map((skill, i) => (
+              <div key={i} className="w-full p-2 sm:w-1/2">
+                <div className="flex h-full items-center gap-4 rounded border border-secondary-500 p-4">
+                  <span
+                    className={`${
+                      i % 2 == 0 ? "order-3" : "order-none"
+                    } title-font font-medium text-white`}
                   >
-                    <span className="text-2xl font-extrabold leading-none text-primary-100">
-                      {x[0]}
-                    </span>
-                    <p className="text-xs font-normal text-gray-200">{x[1]}</p>
-                    <span className="w-full min-w-full">
-                      <div className="w-full rounded-full bg-gray-700">
-                        <div
-                          className="rounded-full bg-secondary-600 p-0.5 text-center text-xs font-medium leading-none text-primary-100"
-                          style={{ width: `${x[2]}%` }}
-                        >
-                          {x[2]}%
-                        </div>
-                      </div>
-                    </span>
+                    {skill.name}
+                  </span>
+                  <div className="w-full -skew-x-[24deg] bg-gray-700">
+                    <div
+                      className="bg-secondary-600 p-0.5 text-center text-xs font-medium leading-none text-primary-100"
+                      style={{ width: `${skill.score}%` }}
+                    >
+                      {skill.score}%
+                    </div>
                   </div>
-                </motion.div>
-              ))}
-            </motion.div>
+                </div>
+              </div>
+            ))}
           </div>
         </motion.div>
       </motion.section>
