@@ -4,6 +4,7 @@ function Rating(props) {
   const rating = props.rate;
   const bgColor = props.bgCol;
   const fgColor = props.fgCol;
+  const customCSS = props.css;
   return (
     <>
       {[...Array(10)].map((star, index) => {
@@ -11,7 +12,7 @@ function Rating(props) {
         return (
           <div
             key={index}
-            className={`${index <= rating ? fgColor : bgColor} w-8 p-1`}
+            className={`${index <= rating ? fgColor : bgColor} ${customCSS}`}
           ></div>
         );
       })}
