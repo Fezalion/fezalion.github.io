@@ -69,38 +69,37 @@ function About() {
             </p>
           </div>
           <motion.div
-            className="mx-auto mb-64 grid w-full grid-flow-row grid-cols-1 md:mb-0 md:grid-cols-2"
+            className="mx-auto mb-64 grid w-full grid-flow-row grid-cols-1 gap-4 md:mb-0 md:grid-cols-2"
             variants={container}
             initial="hidden"
             animate="show"
           >
             {skills.map((skill, i) => (
-              <div key={i} className="w-full p-2">
-                <motion.div
-                  className="flex h-full flex-col items-center justify-end gap-4 rounded border border-secondary-500 py-4 px-2 backdrop-blur-sm"
-                  variants={i % 2 != 0 ? itemR : itemL}
-                >
-                  <div className="h-full w-full">
-                    <span
-                      className={`${
-                        i % 2 != 0 ? "sm:order-3" : "sm:order-none"
-                      } title-font h-full w-full font-medium text-white`}
-                    >
-                      {skill.name}
-                    </span>
-                    <p className="h-full w-full text-gray-500">{skill.desc}</p>
-                  </div>
+              <motion.div
+                className="flex h-full w-full flex-col items-center justify-end gap-4 rounded border border-secondary-500 py-4 px-2 backdrop-blur-sm"
+                variants={i % 2 != 0 ? itemR : itemL}
+                key={i}
+              >
+                <div className="h-full w-full">
+                  <span
+                    className={`${
+                      i % 2 != 0 ? "sm:order-3" : "sm:order-none"
+                    } title-font h-full w-full font-medium text-white`}
+                  >
+                    {skill.name}
+                  </span>
+                  <p className="h-full w-full text-gray-500">{skill.desc}</p>
+                </div>
 
-                  <div className={`flex w-full flex-row justify-center gap-2`}>
-                    <Rating
-                      rate={skill.score}
-                      fgCol={"bg-secondary-500 rounded-full"}
-                      bgCol={"bg-primary-400 rounded-full"}
-                      css={"w-8 p-1"}
-                    />
-                  </div>
-                </motion.div>
-              </div>
+                <div className={`flex w-full flex-row justify-center gap-2`}>
+                  <Rating
+                    rate={skill.score}
+                    fgCol={"bg-secondary-500 rounded-full"}
+                    bgCol={"bg-primary-400 rounded-full"}
+                    css={"w-8 p-1"}
+                  />
+                </div>
+              </motion.div>
             ))}
           </motion.div>
         </motion.div>
