@@ -52,7 +52,7 @@ function Navbar() {
             </div>
 
             <div className="order-1 flex h-full w-auto items-center">
-              <ul className="mr-2 flex flex-row space-x-8 bg-primary-700 px-2 text-xs lg:mt-0 lg:bg-transparent lg:text-base lg:font-medium">
+              <ul className="mr-2 flex flex-row space-x-4 bg-primary-700 px-2 text-xs sm:space-x-8 lg:mt-0 lg:bg-transparent lg:text-base lg:font-medium">
                 <li className="cursor-pointer">
                   <NavLink
                     to="/"
@@ -81,6 +81,16 @@ function Navbar() {
                     }
                   >
                     About
+                  </NavLink>
+                </li>
+                <li className="cursor-pointer">
+                  <NavLink
+                    to="/contact"
+                    className={({ isActive }) =>
+                      isActive ? activeLinkStyle : normalLinkStyle
+                    }
+                  >
+                    Contact
                   </NavLink>
                 </li>
               </ul>

@@ -1,0 +1,142 @@
+import React from "react";
+import { motion } from "framer-motion";
+import { useForm, ValidationError } from "@formspree/react";
+import { NavLink } from "react-router-dom";
+
+const container = {
+  hidden: { opacity: 0 },
+  show: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.1,
+      when: "beforeChildren",
+      delay: 0.1,
+    },
+  },
+};
+
+const item = {
+  hidden: { opacity: 0 },
+  show: { opacity: 1 },
+};
+
+function ContactForm() {
+  const [state, handleSubmit] = useForm("xvonboeo");
+  if (state.succeeded) {
+    return (
+      <div className="relative z-0 mx-auto my-auto grid h-auto w-auto min-w-full content-center overflow-hidden text-center">
+        <h1 className="mb-4 mt-16 text-6xl font-extrabold leading-none tracking-tight text-primary-100 md:text-6xl xl:text-6xl">
+          Thank you!
+        </h1>
+        <p className="mb-8 text-lg font-normal text-gray-500 sm:px-16 lg:text-xl xl:px-48">
+          Go back to{" "}
+          <NavLink
+            to="/"
+            className="text-primary-100 transition-colors hover:text-secondary-600"
+          >
+            Homepage
+          </NavLink>
+          .
+        </p>
+      </div>
+    );
+  }
+  return (
+    <motion.div
+      className="mx-auto max-w-screen-md py-8 px-4 lg:py-16"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+    >
+      <h2 className="mb-4 text-center text-4xl font-extrabold tracking-tight text-gray-900 dark:text-white">
+        Contact Me
+      </h2>
+      <p className="mb-8 text-center font-light text-gray-500 dark:text-gray-400 sm:text-xl lg:mb-16">
+        Want to send me a picture of your cat? Need details about my life? Do
+        you just want to rant about something? Just send me an email below.
+      </p>
+      <motion.form
+        onSubmit={handleSubmit}
+        className="space-y-8"
+        variants={container}
+        initial="hidden"
+        animate="show"
+      >
+        <motion.div variants={item}>
+          <label
+            htmlFor="email"
+            className="mb-2 block text-left text-sm font-medium text-primary-100"
+          >
+            Your email
+          </label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            className="block w-full rounded-lg border border-secondary-500 bg-transparent p-2.5 text-sm text-primary-100 shadow-sm backdrop-blur-sm"
+            placeholder="name@mail.com"
+            required
+          />
+          <ValidationError prefix="Email" field="email" errors={state.errors} />
+        </motion.div>
+        <motion.div className="sm:col-span-2" variants={item}>
+          <label
+            htmlFor="message"
+            className="mb-2 block text-left text-sm font-medium text-primary-100"
+          >
+            Your message
+          </label>
+          <textarea
+            id="message"
+            name="message"
+            rows="6"
+            className="block w-full rounded-lg border border-secondary-500 bg-transparent p-2.5 text-sm text-primary-100 shadow-sm backdrop-blur-sm"
+            placeholder="Leave a comment..."
+            required
+          ></textarea>
+          <ValidationError
+            prefix="Message"
+            field="message"
+            errors={state.errors}
+          />
+        </motion.div>
+        <motion.button
+          variants={item}
+          disabled={state.submitting}
+          type="submit"
+          className="w-full rounded-lg bg-secondary-800 py-3 px-5 text-center text-sm font-medium text-primary-100 hover:bg-secondary-900"
+        >
+          Send message
+        </motion.button>
+      </motion.form>
+    </motion.div>
+  );
+}
+
+function Contact() {
+  return (
+    <>
+      <motion.section
+        className="relative z-0 mx-auto h-auto min-h-screen w-auto min-w-full snap-center content-center overflow-y-scroll text-center"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+      >
+        <motion.div className="my-auto mx-auto max-h-screen min-h-fit w-full max-w-screen-xl pt-32 text-primary-100">
+          <div className="w-full p-4 sm:p-6">
+            <motion.div
+              className="my-4 grid grid-flow-row grid-cols-1"
+              variants={container}
+              initial="hidden"
+              animate="show"
+            >
+              <ContactForm />
+            </motion.div>
+          </div>
+        </motion.div>
+      </motion.section>
+    </>
+  );
+}
+
+export default Contact;
