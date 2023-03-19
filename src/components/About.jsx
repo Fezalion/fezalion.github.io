@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+import Rating from "./Rating";
 
 const container = {
   hidden: { opacity: 0 },
@@ -19,12 +20,12 @@ const item = {
 };
 
 const skills = [
-  { name: "C#", score: 25 },
-  { name: "C#", score: 35 },
-  { name: "C#", score: 45 },
-  { name: "C#", score: 55 },
-  { name: "C#", score: 65 },
-  { name: "C#", score: 75 },
+  { name: "C#", score: 7 },
+  { name: "C#", score: 7 },
+  { name: "C#", score: 5 },
+  { name: "C#", score: 5 },
+  { name: "C#", score: 2 },
+  { name: "C#", score: 10 },
 ];
 
 function About() {
@@ -53,18 +54,13 @@ function About() {
                 <div className="flex h-full items-center gap-4 rounded border border-secondary-500 p-4">
                   <span
                     className={`${
-                      i % 2 == 0 ? "order-3" : "order-none"
+                      i % 2 == 0 ? "sm:order-3" : "sm:order-none"
                     } title-font font-medium text-white`}
                   >
                     {skill.name}
                   </span>
-                  <div className="w-full -skew-x-[24deg] bg-gray-700">
-                    <div
-                      className="bg-secondary-600 p-0.5 text-center text-xs font-medium leading-none text-primary-100"
-                      style={{ width: `${skill.score}%` }}
-                    >
-                      {skill.score}%
-                    </div>
+                  <div className="flex w-full -skew-x-[24deg] flex-row gap-2">
+                    <Rating rate={skill.score} />
                   </div>
                 </div>
               </div>
