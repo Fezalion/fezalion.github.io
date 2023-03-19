@@ -10,7 +10,7 @@ function Navbar() {
   return (
     <>
       <header>
-        <nav className="fixed top-0 left-0 z-40 h-16 w-auto min-w-full border-b border-secondary-700 bg-primary-700 px-4 py-2.5">
+        <nav className="fixed top-0 left-0 z-40 h-16 w-auto min-w-full border-b border-secondary-700 bg-primary-700 px-4 py-4 sm:py-2.5">
           <div className="mx-auto flex max-w-screen-xl flex-wrap items-center justify-between">
             <NavLink to="/" className="flex items-center">
               <span className="self-center whitespace-nowrap text-xl font-semibold text-primary-100">
@@ -18,7 +18,7 @@ function Navbar() {
               </span>
             </NavLink>
 
-            <div className="order-2 flex items-center">
+            <div className="order-2 hidden items-center sm:flex">
               <a
                 href="https://github.com/fezalion/"
                 target="_blank"

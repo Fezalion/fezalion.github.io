@@ -77,7 +77,7 @@ function About() {
             {skills.map((skill, i) => (
               <div key={i} className="w-full p-2 sm:w-1/2">
                 <motion.div
-                  className="flex h-full flex-col items-center justify-end gap-4 rounded border border-secondary-500 p-4 backdrop-blur-sm"
+                  className="flex h-full flex-col items-center justify-end gap-4 rounded border border-secondary-500 py-4 px-2 backdrop-blur-sm"
                   variants={i % 2 != 0 ? itemR : itemL}
                 >
                   <div className="h-full w-full">
@@ -91,17 +91,11 @@ function About() {
                     <p className="h-full w-full text-gray-500">{skill.desc}</p>
                   </div>
 
-                  <div
-                    className={`${
-                      i % 2 != 0
-                        ? "-skew-x-[24deg] justify-center"
-                        : "-skew-x-[24deg] justify-center sm:skew-x-[24deg]"
-                    } flex w-full flex-row gap-2`}
-                  >
+                  <div className={`flex w-full flex-row justify-center gap-2`}>
                     <Rating
                       rate={skill.score}
-                      fgCol={"bg-secondary-500"}
-                      bgCol={"bg-primary-400"}
+                      fgCol={"bg-secondary-500 rounded-full"}
+                      bgCol={"bg-primary-400 rounded-full"}
                       css={"w-8 p-1"}
                     />
                   </div>
