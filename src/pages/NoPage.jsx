@@ -1,11 +1,11 @@
 import { React } from "react";
 import { NavLink } from "react-router-dom";
-import { motion } from "framer-motion";
+import { domAnimation, LazyMotion, m } from "framer-motion";
 
 function NoPage() {
   return (
-    <>
-      <motion.main
+    <LazyMotion features={domAnimation}>
+      <m.main
         className="relative z-0 mx-4 mt-0 grid min-h-screen w-auto grid-flow-row grid-cols-1 px-8 md:mx-8 lg:mx-16"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
@@ -26,8 +26,8 @@ function NoPage() {
             .
           </p>
         </section>
-      </motion.main>
-    </>
+      </m.main>
+    </LazyMotion>
   );
 }
 

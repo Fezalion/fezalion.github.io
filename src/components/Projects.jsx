@@ -1,5 +1,5 @@
 import React from "react";
-import { motion } from "framer-motion";
+import { domAnimation, LazyMotion, m } from "framer-motion";
 
 const container = {
   hidden: { opacity: 0 },
@@ -20,15 +20,15 @@ const item = {
 
 function Projects() {
   return (
-    <>
-      <motion.section
+    <LazyMotion features={domAnimation}>
+      <m.section
         className="relative z-0 mx-auto mt-16 grid h-auto min-h-screen w-auto min-w-full snap-center content-center text-center lg:mt-0 lg:text-left"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
       >
         <div className="z-0 mx-auto max-w-screen-2xl px-4 sm:pb-16 lg:mb-0 lg:px-6">
-          <motion.div
+          <m.div
             className="mb-8 max-w-screen-md lg:mb-16"
             variants={container}
             initial="hidden"
@@ -41,15 +41,15 @@ function Projects() {
             <p className="text-gray-500 sm:text-xl">
               Here you can see some of the repos I use, or code myself.
             </p>
-          </motion.div>
+          </m.div>
 
-          <motion.div
+          <m.div
             className="grid space-y-8 text-left md:grid md:grid-cols-2 md:gap-12 md:space-y-0 lg:grid-cols-3"
             variants={container}
             initial="hidden"
             animate="show"
           >
-            <motion.article variants={item}>
+            <m.article variants={item}>
               <h3 className="mb-2 w-auto text-xl font-bold text-primary-100">
                 <span className="relative">
                   FezBotRedux
@@ -82,8 +82,8 @@ function Projects() {
                 </a>{" "}
                 library, mainly used privately in my own server.
               </p>
-            </motion.article>
-            <motion.article variants={item}>
+            </m.article>
+            <m.article variants={item}>
               <h3 className="mb-2 w-auto text-xl font-bold text-primary-100">
                 <span className="relative">
                   ConsoleMenuGeneric
@@ -109,8 +109,8 @@ function Projects() {
                 Keyboard operated switch menu coded in C#, mainly used for
                 personal highschool projects and abandoned since graduation.
               </p>
-            </motion.article>
-            <motion.article variants={item}>
+            </m.article>
+            <m.article variants={item}>
               <h3 className="mb-2 w-auto text-xl font-bold text-primary-100">
                 <span className="relative">
                   ForzaTuneHelper
@@ -145,8 +145,8 @@ function Projects() {
                 </a>{" "}
                 but abandoned since newer titles came out.
               </p>
-            </motion.article>
-            <motion.article variants={item}>
+            </m.article>
+            <m.article variants={item}>
               <h3 className="mb-2 w-auto text-xl font-bold text-primary-100">
                 <span className="relative">
                   Fezalion.tech
@@ -171,8 +171,8 @@ function Projects() {
               <p className="text-gray-400">
                 This very website you are on, built with ReactJS, using vite.
               </p>
-            </motion.article>
-            <motion.article variants={item}>
+            </m.article>
+            <m.article variants={item}>
               <h3 className="mb-2 w-auto text-xl font-bold text-primary-100">
                 <span className="relative">
                   thefuck by nvbn
@@ -199,8 +199,8 @@ function Projects() {
                 which is something I can't live without anymore. Its genious
                 work.
               </p>
-            </motion.article>
-            <motion.article variants={item}>
+            </m.article>
+            <m.article variants={item}>
               <h3 className="mb-2 w-auto text-xl font-bold text-primary-100">
                 <span className="relative">
                   owoifier
@@ -226,11 +226,11 @@ function Projects() {
                 Dead project of mine, after powercord closed I stopped
                 developing it.
               </p>
-            </motion.article>
-          </motion.div>
+            </m.article>
+          </m.div>
         </div>
-      </motion.section>
-    </>
+      </m.section>
+    </LazyMotion>
   );
 }
 

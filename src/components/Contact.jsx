@@ -1,5 +1,5 @@
 import React from "react";
-import { motion } from "framer-motion";
+import { domAnimation, LazyMotion, m } from "framer-motion";
 import { useForm, ValidationError } from "@formspree/react";
 import { NavLink } from "react-router-dom";
 
@@ -42,7 +42,7 @@ function ContactForm() {
     );
   }
   return (
-    <motion.div
+    <m.div
       className="mx-auto max-w-screen-md py-8 px-4 lg:py-16"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
@@ -55,14 +55,14 @@ function ContactForm() {
         Want to send me a picture of your cat? Need details about my life? Do
         you just want to rant about something? Just send me an email below.
       </p>
-      <motion.form
+      <m.form
         onSubmit={handleSubmit}
         className="space-y-8"
         variants={container}
         initial="hidden"
         animate="show"
       >
-        <motion.div variants={item}>
+        <m.div variants={item}>
           <label
             htmlFor="email"
             className="mb-2 block text-left text-sm font-medium text-primary-100"
@@ -78,8 +78,8 @@ function ContactForm() {
             required
           />
           <ValidationError prefix="Email" field="email" errors={state.errors} />
-        </motion.div>
-        <motion.div className="sm:col-span-2" variants={item}>
+        </m.div>
+        <m.div className="sm:col-span-2" variants={item}>
           <label
             htmlFor="message"
             className="mb-2 block text-left text-sm font-medium text-primary-100"
@@ -99,43 +99,43 @@ function ContactForm() {
             field="message"
             errors={state.errors}
           />
-        </motion.div>
-        <motion.button
+        </m.div>
+        <m.button
           variants={item}
           disabled={state.submitting}
           type="submit"
           className="w-full rounded-lg bg-secondary-800 py-3 px-5 text-center text-sm font-medium text-primary-100 hover:bg-secondary-900"
         >
           Send message
-        </motion.button>
-      </motion.form>
-    </motion.div>
+        </m.button>
+      </m.form>
+    </m.div>
   );
 }
 
 function Contact() {
   return (
-    <>
-      <motion.section
+    <LazyMotion features={domAnimation}>
+      <m.section
         className="relative z-0 mx-auto h-auto min-h-screen w-auto min-w-full snap-center content-center overflow-y-scroll text-center"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
       >
-        <motion.div className="my-auto mx-auto max-h-screen min-h-fit w-full max-w-screen-xl pt-32 text-primary-100">
+        <m.div className="my-auto mx-auto max-h-screen min-h-fit w-full max-w-screen-xl pt-32 text-primary-100">
           <div className="w-full p-4 sm:p-6">
-            <motion.div
+            <m.div
               className="my-4 grid grid-flow-row grid-cols-1"
               variants={container}
               initial="hidden"
               animate="show"
             >
               <ContactForm />
-            </motion.div>
+            </m.div>
           </div>
-        </motion.div>
-      </motion.section>
-    </>
+        </m.div>
+      </m.section>
+    </LazyMotion>
   );
 }
 

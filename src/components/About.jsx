@@ -1,5 +1,5 @@
 import React from "react";
-import { motion } from "framer-motion";
+import { domAnimation, LazyMotion, m } from "framer-motion";
 import Rating from "./Rating";
 
 const container = {
@@ -15,6 +15,11 @@ const container = {
       duration: 1,
     },
   },
+};
+
+const item = {
+  hidden: { opacity: 0 },
+  show: { opacity: 1 },
 };
 
 const itemL = {
@@ -51,14 +56,14 @@ const skills = [
 
 function About() {
   return (
-    <>
-      <motion.section
+    <LazyMotion features={domAnimation}>
+      <m.section
         className="relative z-0 mx-auto h-auto min-h-screen w-auto min-w-full snap-center content-center overflow-y-scroll text-center"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
       >
-        <motion.div className="my-auto mx-auto max-h-screen min-h-fit w-full max-w-screen-xl pt-32 text-primary-100">
+        <m.div className="my-auto mx-auto max-h-screen min-h-fit w-full max-w-screen-xl pt-32 text-primary-100">
           <div className="mb-20 text-center">
             <h1 className="title-font mb-4 text-3xl font-medium text-white sm:text-4xl">
               Skills &amp; Technologies
@@ -68,14 +73,14 @@ function About() {
               here is some that I think I am more capable of.
             </p>
           </div>
-          <motion.div
+          <m.div
             className="mx-auto mb-64 grid w-full grid-flow-row grid-cols-1 gap-4 md:mb-0 md:grid-cols-2"
             variants={container}
             initial="hidden"
             animate="show"
           >
             {skills.map((skill, i) => (
-              <motion.div
+              <m.div
                 className="flex h-full w-full flex-col items-center justify-end gap-4 rounded border border-secondary-500 py-4 px-2 backdrop-blur-sm"
                 variants={i % 2 != 0 ? itemR : itemL}
                 key={i}
@@ -99,12 +104,12 @@ function About() {
                     css={"w-8 p-1"}
                   />
                 </div>
-              </motion.div>
+              </m.div>
             ))}
-          </motion.div>
-        </motion.div>
-      </motion.section>
-    </>
+          </m.div>
+        </m.div>
+      </m.section>
+    </LazyMotion>
   );
 }
 
