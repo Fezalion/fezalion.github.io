@@ -69,13 +69,13 @@ function About() {
             </p>
           </div>
           <motion.div
-            className="mx-auto flex flex-wrap sm:mb-2 lg:w-4/5"
+            className="mx-auto mb-64 grid w-full grid-flow-row grid-cols-1 md:mb-0 md:grid-cols-2"
             variants={container}
             initial="hidden"
             animate="show"
           >
             {skills.map((skill, i) => (
-              <div key={i} className="w-full p-2 sm:w-1/2">
+              <div key={i} className="w-full p-2">
                 <motion.div
                   className="flex h-full flex-col items-center justify-end gap-4 rounded border border-secondary-500 py-4 px-2 backdrop-blur-sm"
                   variants={i % 2 != 0 ? itemR : itemL}
