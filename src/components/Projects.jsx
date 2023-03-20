@@ -11,13 +11,15 @@ const container = {
       staggerChildren: 0.2,
       when: "beforeChildren",
       delay: 0.2,
+      ease: "anticipate",
+      duration: 0.5,
     },
   },
 };
 
 const item = {
-  hidden: { opacity: 0 },
-  show: { opacity: 1 },
+  hidden: { opacity: 0, y: 20 },
+  show: { opacity: 1, y: 0, transition: { duration: 0.5, ease: "anticipate" } },
 };
 
 function Projects() {
@@ -52,7 +54,7 @@ function Projects() {
             animate="show"
           >
             {myprojects.map((project, i) => (
-              <m.article key={i}>
+              <m.article key={i} variants={item}>
                 <h3 className="mb-2 w-auto text-xl font-bold text-primary-100">
                   <span className="relative">
                     {project.name}

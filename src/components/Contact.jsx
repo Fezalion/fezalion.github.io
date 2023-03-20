@@ -10,14 +10,16 @@ const container = {
     transition: {
       staggerChildren: 0.1,
       when: "beforeChildren",
-      delay: 0.1,
+      delay: 0,
+      ease: "anticipate",
+      duration: 1,
     },
   },
 };
 
 const item = {
   hidden: { opacity: 0 },
-  show: { opacity: 1 },
+  show: { opacity: 1, transition: { duration: 0.5, ease: "anticipate" } },
 };
 
 function ContactForm() {

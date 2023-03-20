@@ -8,10 +8,9 @@ const container = {
     transition: {
       staggerChildren: 0.1,
       when: "beforeChildren",
-      delay: 2,
-      type: "spring",
-      bounce: 0.25,
-      duration: 0.2,
+      delay: 1,
+      duration: 0.5,
+      ease: "anticipate",
     },
   },
 };

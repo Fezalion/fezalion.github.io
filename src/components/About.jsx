@@ -8,23 +8,22 @@ const container = {
   show: {
     opacity: 1,
     transition: {
-      staggerChildren: 0.3,
+      staggerChildren: 0.1,
       when: "beforeChildren",
       delay: 0,
-      type: "spring",
-      bounce: 0.25,
-      duration: 1,
+      duration: 0.5,
+      ease: "anticipate",
     },
   },
 };
 
 const itemL = {
   hidden: { opacity: 0, x: -200 },
-  show: { opacity: 1, x: 0 },
+  show: { opacity: 1, x: 0, transition: { duration: 0.5, ease: "anticipate" } },
 };
 const itemR = {
   hidden: { opacity: 0, x: 200 },
-  show: { opacity: 1, x: 0 },
+  show: { opacity: 1, x: 0, transition: { duration: 0.5, ease: "anticipate" } },
 };
 
 function About() {

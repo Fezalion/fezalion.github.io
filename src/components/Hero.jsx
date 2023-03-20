@@ -12,7 +12,7 @@ const animationVariants = {
     x: 0,
     y: 0,
     opacity: 1,
-    transition: { duration: 0.5, ease: [0.5, 1, 0.89, 1] },
+    transition: { duration: 0.5, ease: "anticipate" },
   },
 };
 
@@ -23,15 +23,19 @@ const container = {
     transition: {
       staggerChildren: 0.1,
       when: "beforeChildren",
-      ease: [0.5, 1, 0.89, 1],
+      ease: "anticipate",
       duration: 0.5,
     },
   },
 };
 
 const item = {
-  hidden: { opacity: 0, x: 500 },
-  show: { opacity: 1, x: 0 },
+  hidden: { opacity: 0, y: 50 },
+  show: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.5, ease: "anticipate" },
+  },
 };
 
 function Hero() {
@@ -57,30 +61,11 @@ function Hero() {
               initial="hidden"
               animate="show"
             >
-              <m.span className="transform-gpu" variants={item}>
-                F
-              </m.span>
-              <m.span className="transform-gpu" variants={item}>
-                e
-              </m.span>
-              <m.span className="transform-gpu" variants={item}>
-                z
-              </m.span>
-              <m.span className="transform-gpu" variants={item}>
-                a
-              </m.span>
-              <m.span className="transform-gpu" variants={item}>
-                l
-              </m.span>
-              <m.span className="transform-gpu" variants={item}>
-                i
-              </m.span>
-              <m.span className="transform-gpu" variants={item}>
-                o
-              </m.span>
-              <m.span className="transform-gpu" variants={item}>
-                n
-              </m.span>
+              {Array(..."Fezalion").map((s, i) => (
+                <m.div key={i} className="inline-flex" variants={item}>
+                  {s}
+                </m.div>
+              ))}
             </m.span>
           </m.h1>
           <m.p
