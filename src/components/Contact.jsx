@@ -45,14 +45,14 @@ function ContactForm() {
   }
   return (
     <m.div
-      className="mx-auto max-w-screen-md py-8 px-4 lg:py-16"
+      className="mx-auto max-w-screen-md px-4"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
     >
-      <h2 className="mb-4 text-center text-4xl font-extrabold tracking-tight text-gray-900 dark:text-white">
+      <h1 className="title-font mb-4 text-3xl font-medium text-white sm:text-4xl">
         Contact Me
-      </h2>
+      </h1>
       <p className="mb-8 text-center font-light text-gray-500 dark:text-gray-400 sm:text-xl lg:mb-16">
         Want to send me a picture of your cat? Need details about my life? Do
         you just want to rant about something? Just send me an email below.
@@ -125,9 +125,9 @@ function Contact() {
         exit={{ opacity: 0 }}
       >
         <m.div className="my-auto mx-auto max-h-screen min-h-fit w-full max-w-screen-xl pt-32 text-primary-100">
-          <div className="w-full p-4 sm:p-6">
+          <div className="mb-20 text-center">
             <m.div
-              className="my-4 grid grid-flow-row grid-cols-1"
+              className="grid grid-flow-row grid-cols-1"
               variants={container}
               initial="hidden"
               animate="show"

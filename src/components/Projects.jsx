@@ -26,29 +26,30 @@ function Projects() {
   return (
     <LazyMotion features={domAnimation}>
       <m.section
-        className="relative z-0 mx-auto mt-16 grid h-auto min-h-screen w-auto min-w-full snap-center content-center text-center lg:mt-0 lg:text-left"
+        className="relative z-0 mx-auto h-auto w-auto min-w-full snap-center content-center pb-36 text-center sm:pb-0"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
       >
-        <div className="z-0 mx-auto max-w-screen-2xl px-4 sm:pb-16 lg:mb-0 lg:px-6">
+        <div className="my-auto mx-auto w-full max-w-screen-lg pt-32 text-primary-100">
           <m.div
-            className="mb-8 max-w-screen-md lg:mb-16"
+            className="mx-4 max-w-screen-md text-center md:mb-20 lg:mx-auto"
             variants={container}
             initial="hidden"
             animate="show"
           >
-            <h2 className="mb-4 text-4xl font-extrabold tracking-tight text-primary-100">
-              I do play games a lot, and sometimes code my own tools for the
-              games I play.
+            <h2 className="title-font mb-4 text-3xl font-medium text-white sm:text-4xl">
+              Projects
             </h2>
-            <p className="text-gray-500 sm:text-xl">
-              Here you can see some of the repos I use, or code myself.
+            <p className="mb-8 text-center font-light text-gray-500 dark:text-gray-400 sm:text-xl lg:mb-16">
+              I do play games a lot, and sometimes code my own tools for the
+              games I play. Here you can see some of the repos I use, or code
+              myself.
             </p>
           </m.div>
 
           <m.div
-            className="grid space-y-8 text-left md:grid md:grid-cols-2 md:gap-12 md:space-y-0 lg:grid-cols-3"
+            className="mx-4 grid space-y-8 text-left md:grid md:grid-cols-2 md:gap-12 md:space-y-0 lg:mx-0 lg:grid-cols-3"
             variants={container}
             initial="hidden"
             animate="show"
