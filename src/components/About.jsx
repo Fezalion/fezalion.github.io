@@ -1,6 +1,7 @@
 import React from "react";
 import { domAnimation, LazyMotion, m } from "framer-motion";
 import Rating from "./Rating";
+import skills from "./data/skills";
 
 const container = {
   hidden: { opacity: 0 },
@@ -17,11 +18,6 @@ const container = {
   },
 };
 
-const item = {
-  hidden: { opacity: 0 },
-  show: { opacity: 1 },
-};
-
 const itemL = {
   hidden: { opacity: 0, x: -200 },
   show: { opacity: 1, x: 0 },
@@ -30,29 +26,6 @@ const itemR = {
   hidden: { opacity: 0, x: 200 },
   show: { opacity: 1, x: 0 },
 };
-
-const skills = [
-  {
-    name: "C#",
-    desc: "dotnet core, MVC, winforms, maui, Blazor and other C# family members",
-    score: 7,
-  },
-  {
-    name: "JavaScript",
-    desc: "React, TypeScript, still learning about more",
-    score: 6,
-  },
-  {
-    name: "Photo Editing",
-    desc: "GIMP, Adobe Photoshop, Adobe Lightroom, Adobe Illustrator",
-    score: 5,
-  },
-  {
-    name: "Video Editing",
-    desc: "Adobe After Effects, and simple video editing",
-    score: 5,
-  },
-];
 
 function About() {
   return (
