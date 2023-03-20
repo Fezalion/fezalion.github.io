@@ -18,11 +18,11 @@ const container = {
 };
 
 const itemL = {
-  hidden: { opacity: 0, x: -200 },
+  hidden: { opacity: 0, x: -30 },
   show: { opacity: 1, x: 0, transition: { duration: 0.5, ease: "anticipate" } },
 };
 const itemR = {
-  hidden: { opacity: 0, x: 200 },
+  hidden: { opacity: 0, x: 30 },
   show: { opacity: 1, x: 0, transition: { duration: 0.5, ease: "anticipate" } },
 };
 
