@@ -86,9 +86,12 @@ function ContactForm() {
         </m.div>
         <m.button
           variants={FezAnimations.item}
+          whileHover={{ scale: 1.02 }}
+          whileTap={{ scale: 0.99 }}
+          transition={{ type: "spring", stiffness: 400, damping: 17 }}
           disabled={state.submitting}
           type="submit"
-          className="w-full rounded-lg bg-secondary-800 py-3 px-5 text-center text-sm font-medium text-primary-100 hover:bg-secondary-900"
+          className="w-full rounded-lg bg-secondary-800 py-3 text-center text-sm font-medium text-primary-100 hover:bg-secondary-700 hover:text-primary-600"
         >
           Send message
         </m.button>
