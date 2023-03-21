@@ -23,6 +23,7 @@ const container = {
     transition: {
       staggerChildren: 0.1,
       when: "beforeChildren",
+      delay: 0,
       ease: "anticipate",
       duration: 0.5,
     },

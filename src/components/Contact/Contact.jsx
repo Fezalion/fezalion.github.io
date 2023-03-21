@@ -8,11 +8,11 @@ const container = {
   show: {
     opacity: 1,
     transition: {
-      staggerChildren: 0.1,
+      staggerChildren: 0.2,
       when: "beforeChildren",
-      delay: 0,
+      delay: 0.2,
       ease: "anticipate",
-      duration: 1,
+      duration: 0.5,
     },
   },
 };
