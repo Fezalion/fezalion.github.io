@@ -2,8 +2,8 @@ import React, { Suspense } from "react";
 import { Triangle } from "react-loader-spinner";
 import { Outlet } from "react-router-dom";
 
-const Navbar = React.lazy(() => import("./components/Navbar.jsx"));
-const Footer = React.lazy(() => import("./components/Footer.jsx"));
+const Navbar = React.lazy(() => import("./components/Navbar"));
+const Footer = React.lazy(() => import("./components/Footer"));
 
 function Layout() {
   return (

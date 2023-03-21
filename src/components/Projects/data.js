@@ -1,4 +1,4 @@
-const myprojects = [
+const data = [
   {
     name: "FezBotRedux",
     desc: 'A discord chat bot coded in <a className="cursor-pointer text-secondary-500" target="_blank" href="https://discordnet.dev/">Discord.NET</a> library, mainly used privately in my own server.',
@@ -31,4 +31,4 @@ const myprojects = [
   },
 ];
 
-export default myprojects;
+export default data;

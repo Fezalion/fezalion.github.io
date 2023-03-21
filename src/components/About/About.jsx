@@ -1,7 +1,7 @@
 import React from "react";
 import { domAnimation, LazyMotion, m } from "framer-motion";
 import Rating from "./Rating";
-import skills from "./data/skills";
+import skills from "./skills";
 
 const container = {
   hidden: { opacity: 0 },

@@ -1,7 +1,7 @@
 import React from "react";
 import parse from "html-react-parser";
 import { domAnimation, LazyMotion, m } from "framer-motion";
-import myprojects from "./data/projects";
+import data from "./data";
 
 const container = {
   hidden: { opacity: 0 },
@@ -54,7 +54,7 @@ function Projects() {
             initial="hidden"
             animate="show"
           >
-            {myprojects.map((project, i) => (
+            {data.map((project, i) => (
               <m.article key={i} variants={item}>
                 <h3 className="mb-2 w-auto text-xl font-bold text-primary-100">
                   <span className="relative">
