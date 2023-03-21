@@ -2,25 +2,7 @@ import React from "react";
 import { domAnimation, LazyMotion, m } from "framer-motion";
 import { useForm, ValidationError } from "@formspree/react";
 import { NavLink } from "react-router-dom";
-
-const container = {
-  hidden: { opacity: 0 },
-  show: {
-    opacity: 1,
-    transition: {
-      staggerChildren: 0.2,
-      when: "beforeChildren",
-      delay: 0.2,
-      ease: "anticipate",
-      duration: 0.5,
-    },
-  },
-};
-
-const item = {
-  hidden: { opacity: 0 },
-  show: { opacity: 1, transition: { duration: 0.5, ease: "anticipate" } },
-};
+import FezAnimations from "../animations";
 
 function ContactForm() {
   const [state, handleSubmit] = useForm("xvonboeo");
@@ -60,11 +42,11 @@ function ContactForm() {
       <m.form
         onSubmit={handleSubmit}
         className="space-y-8"
-        variants={container}
+        variants={FezAnimations.container}
         initial="hidden"
         animate="show"
       >
-        <m.div variants={item}>
+        <m.div variants={FezAnimations.item}>
           <label
             htmlFor="email"
             className="mb-2 block text-left text-sm font-medium text-primary-100"
@@ -81,7 +63,7 @@ function ContactForm() {
           />
           <ValidationError prefix="Email" field="email" errors={state.errors} />
         </m.div>
-        <m.div className="sm:col-span-2" variants={item}>
+        <m.div className="sm:col-span-2" variants={FezAnimations.item}>
           <label
             htmlFor="message"
             className="mb-2 block text-left text-sm font-medium text-primary-100"
@@ -103,7 +85,7 @@ function ContactForm() {
           />
         </m.div>
         <m.button
-          variants={item}
+          variants={FezAnimations.item}
           disabled={state.submitting}
           type="submit"
           className="w-full rounded-lg bg-secondary-800 py-3 px-5 text-center text-sm font-medium text-primary-100 hover:bg-secondary-900"
@@ -128,7 +110,7 @@ function Contact() {
           <div className="mb-20 text-center">
             <m.div
               className="grid grid-flow-row grid-cols-1"
-              variants={container}
+              variants={FezAnimations.container}
               initial="hidden"
               animate="show"
             >

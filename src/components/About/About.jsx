@@ -2,29 +2,7 @@ import React from "react";
 import { domAnimation, LazyMotion, m } from "framer-motion";
 import Rating from "./Rating";
 import skills from "./skills";
-
-const container = {
-  hidden: { opacity: 0 },
-  show: {
-    opacity: 1,
-    transition: {
-      staggerChildren: 0.2,
-      when: "beforeChildren",
-      delay: 0.2,
-      ease: "anticipate",
-      duration: 0.5,
-    },
-  },
-};
-
-const itemL = {
-  hidden: { opacity: 0, x: -30 },
-  show: { opacity: 1, x: 0, transition: { duration: 0.5, ease: "anticipate" } },
-};
-const itemR = {
-  hidden: { opacity: 0, x: 30 },
-  show: { opacity: 1, x: 0, transition: { duration: 0.5, ease: "anticipate" } },
-};
+import FezAnimations from "../animations";
 
 function About() {
   return (
@@ -38,7 +16,7 @@ function About() {
         <div className="my-auto mx-auto w-full pt-32 text-primary-100">
           <m.div
             className="mx-auto max-w-screen-md text-center"
-            variants={container}
+            variants={FezAnimations.container}
             initial="hidden"
             animate="show"
           >
@@ -52,14 +30,16 @@ function About() {
           </m.div>
           <m.div
             className="grid w-full max-w-screen-lg grid-flow-row grid-cols-1 gap-4 md:mx-auto md:mb-0 md:grid-cols-2"
-            variants={container}
+            variants={FezAnimations.container}
             initial="hidden"
             animate="show"
           >
             {skills.map((skill, i) => (
               <m.div
                 className="flex h-full w-full flex-col items-center justify-end gap-4 rounded border-secondary-500 py-4 px-2 backdrop-blur-sm lg:border"
-                variants={i % 2 != 0 ? itemR : itemL}
+                variants={
+                  i % 2 != 0 ? FezAnimations.itemR : FezAnimations.itemL
+                }
                 key={i}
               >
                 <div className="h-full w-full">

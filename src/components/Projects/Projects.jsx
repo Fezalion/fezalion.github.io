@@ -2,25 +2,7 @@ import React from "react";
 import parse from "html-react-parser";
 import { domAnimation, LazyMotion, m } from "framer-motion";
 import data from "./data";
-
-const container = {
-  hidden: { opacity: 0 },
-  show: {
-    opacity: 1,
-    transition: {
-      staggerChildren: 0.2,
-      when: "beforeChildren",
-      delay: 0.2,
-      ease: "anticipate",
-      duration: 0.5,
-    },
-  },
-};
-
-const item = {
-  hidden: { opacity: 0, y: 20 },
-  show: { opacity: 1, y: 0, transition: { duration: 0.5, ease: "anticipate" } },
-};
+import FezAnimations from "../animations";
 
 function Projects() {
   return (
@@ -34,7 +16,7 @@ function Projects() {
         <div className="my-auto mx-auto w-full pt-32 text-primary-100">
           <m.div
             className="mx-auto max-w-screen-md text-center md:mb-20"
-            variants={container}
+            variants={FezAnimations.container}
             initial="hidden"
             animate="show"
           >
@@ -50,12 +32,12 @@ function Projects() {
 
           <m.div
             className="mx-4 grid max-w-screen-lg space-y-8 text-left md:mx-auto md:grid-cols-2 md:gap-12 md:space-y-0 lg:grid-cols-3"
-            variants={container}
+            variants={FezAnimations.container}
             initial="hidden"
             animate="show"
           >
             {data.map((project, i) => (
-              <m.article key={i} variants={item}>
+              <m.article key={i} variants={FezAnimations.item}>
                 <h3 className="mb-2 w-auto text-xl font-bold text-primary-100">
                   <span className="relative">
                     {project.name}
