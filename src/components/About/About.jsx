@@ -35,8 +35,13 @@ function About() {
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
       >
-        <m.div className="my-auto mx-auto w-full max-w-screen-lg pt-32 text-primary-100">
-          <div className="mx-4 max-w-screen-md text-center lg:mx-auto">
+        <div className="my-auto mx-auto w-full pt-32 text-primary-100">
+          <m.div
+            className="mx-auto max-w-screen-md text-center"
+            variants={container}
+            initial="hidden"
+            animate="show"
+          >
             <h1 className="title-font mb-4 text-3xl font-medium text-white sm:text-4xl">
               Skills &amp; Technologies
             </h1>
@@ -44,9 +49,9 @@ function About() {
               I have basic entry level knowledge on most of the tech stack but
               here is some that I think I am more capable of.
             </p>
-          </div>
+          </m.div>
           <m.div
-            className="grid w-full grid-flow-row grid-cols-1 gap-4 md:mx-auto md:mb-0 md:grid-cols-2"
+            className="grid w-full max-w-screen-lg grid-flow-row grid-cols-1 gap-4 md:mx-auto md:mb-0 md:grid-cols-2"
             variants={container}
             initial="hidden"
             animate="show"
@@ -79,7 +84,7 @@ function About() {
               </m.div>
             ))}
           </m.div>
-        </m.div>
+        </div>
       </m.section>
     </LazyMotion>
   );

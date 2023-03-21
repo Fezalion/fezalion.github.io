@@ -31,9 +31,9 @@ function Projects() {
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
       >
-        <div className="my-auto mx-auto w-full max-w-screen-lg pt-32 text-primary-100">
+        <div className="my-auto mx-auto w-full pt-32 text-primary-100">
           <m.div
-            className="mx-4 max-w-screen-md text-center md:mb-20 lg:mx-auto"
+            className="mx-auto max-w-screen-md text-center md:mb-20"
             variants={container}
             initial="hidden"
             animate="show"
@@ -49,7 +49,7 @@ function Projects() {
           </m.div>
 
           <m.div
-            className="mx-4 grid space-y-8 text-left md:grid md:grid-cols-2 md:gap-12 md:space-y-0 lg:mx-0 lg:grid-cols-3"
+            className="mx-4 grid max-w-screen-lg space-y-8 text-left md:mx-auto md:grid-cols-2 md:gap-12 md:space-y-0 lg:grid-cols-3"
             variants={container}
             initial="hidden"
             animate="show"
