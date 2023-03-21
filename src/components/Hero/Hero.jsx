@@ -1,6 +1,7 @@
 import React from "react";
 import { domAnimation, LazyMotion, m } from "framer-motion";
 import FezAnimations from "../animations";
+import GithubStars from "./githubstats";
 //todo: maybe a better animation idk man
 
 function Hero() {
@@ -45,6 +46,7 @@ function Hero() {
           >
             I make coffee into code.
           </m.p>
+          <GithubStars />
         </div>
       </m.section>
     </LazyMotion>
