@@ -25,7 +25,7 @@ module.exports = {
         "pop-out": "start 500ms ease-in reverse",
       },
       fontFamily: {
-        sans: ["Inter var", ...defaultTheme.fontFamily.sans],
+        sans: ["Inter", ...defaultTheme.fontFamily.sans],
       },
       colors: {
         primary: {

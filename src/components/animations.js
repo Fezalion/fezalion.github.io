@@ -28,7 +28,7 @@ const FezAnimations = {
     },
   },
   itemL: {
-    hidden: { opacity: 0, x: -30 },
+    hidden: { opacity: 0, x: -20 },
     show: {
       opacity: 1,
       x: 0,
@@ -36,7 +36,7 @@ const FezAnimations = {
     },
   },
   itemR: {
-    hidden: { opacity: 0, x: 30 },
+    hidden: { opacity: 0, x: 20 },
     show: {
       opacity: 1,
       x: 0,

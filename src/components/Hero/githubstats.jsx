@@ -23,7 +23,7 @@ function GithubStars() {
       });
   }, []);
   return (
-    <Suspense fallback={<div> Loading... </div>}>
+    <Suspense fallback={<></>}>
       <m.p
         className="text-lg font-normal text-gray-500 sm:px-16 lg:text-xl xl:px-48"
         initial="hidden"
