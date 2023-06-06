@@ -5,6 +5,7 @@ import { AnimatePresence } from "framer-motion";
 import Layout from "../Layout";
 import Hero from "../components/Hero";
 import About from "../components/About";
+import Gallery from "../components/Gallery";
 import NoPage from "./NoPage";
 import Projects from "../components/Projects";
 import Contact from "../components/Contact";
@@ -17,6 +18,7 @@ function AnimatedRoutes() {
       <Routes location={location} key={location.pathname}>
         <Route path="/" element={<Layout />}>
           <Route index element={<Hero />} />
+          <Route path="gallery" element={<Gallery />} />
           <Route path="about" element={<About />} />
           <Route path="projects" element={<Projects />} />
           <Route path="contact" element={<Contact />} />

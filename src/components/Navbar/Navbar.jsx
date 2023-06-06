@@ -63,6 +63,16 @@ function Navbar() {
                     Home
                   </NavLink>
                 </li>
+                <li className="cursor-pointer">
+                  <NavLink
+                    to="/gallery"
+                    className={({ isActive }) =>
+                      isActive ? activeLinkStyle : normalLinkStyle
+                    }
+                  >
+                    Gallery
+                  </NavLink>
+                </li>
                 <li className="cursor-pointer ">
                   <NavLink
                     to="/projects"
