@@ -74,8 +74,7 @@ function ContactForm() {
             id="message"
             name="message"
             rows="6"
-            resize="none"
-            className="block w-full rounded-lg border border-secondary-500 bg-transparent p-2.5 text-sm text-primary-100 shadow-sm backdrop-blur-sm"
+            className="block w-full resize-none rounded-lg border border-secondary-500 bg-transparent p-2.5 text-sm text-primary-100 shadow-sm backdrop-blur-sm"
             placeholder="Leave a comment..."
             required
           ></textarea>
