@@ -63,7 +63,7 @@ function Navbar() {
                     Home
                   </NavLink>
                 </li>
-                <li className="cursor-pointer">
+                /*<li className="cursor-pointer">
                   <NavLink
                     to="/gallery"
                     className={({ isActive }) =>
@@ -72,7 +72,7 @@ function Navbar() {
                   >
                     Gallery
                   </NavLink>
-                </li>
+                </li>*/
                 <li className="cursor-pointer ">
                   <NavLink
                     to="/projects"
