@@ -1,32 +1,19 @@
 import React from "react";
 import { domAnimation, LazyMotion, m } from "framer-motion";
 import FezAnimations from "../animations";
-
-import img1 from "../../images/00000.png";
-import img2 from "../../images/00001.png";
-import img3 from "../../images/00002.png";
-import img4 from "../../images/00003.png";
-import img5 from "../../images/00004.png";
-
-const images = [img1, img2, img3, img4, img5];
+import MusicPlayer from "./MusicPlayer";
 
 const ImagesComponent = () => {
   return (
     <>
-      {images.map((img, i) => (
-        <m.div
-          className="flex h-full w-full flex-col items-center justify-end gap-4 rounded border-secondary-500 py-4 px-2 backdrop-blur-sm lg:border"
-          variants={FezAnimations.container}
-          key={i}
-        >
-          <div className="h-full w-full">
-            <img
-              className="title-font h-full w-full font-medium text-white"
-              src={img}
-            />
-          </div>
-        </m.div>
-      ))}
+      <div className="container mx-auto flex w-full flex-col p-4">
+        <h1 className="mb-4 text-xl font-bold">Music Player</h1>
+        <MusicPlayer src="/music/faster.mp3" title="Song 1" />
+        <MusicPlayer src="/music/faster1.mp3" title="Song 2" />
+        <MusicPlayer src="/music/faster2.mp3" title="Song 3" />
+        <MusicPlayer src="/music/faster3.mp3" title="Song 4" />
+        <MusicPlayer src="/music/faster4.mp3" title="Song 5" />
+      </div>
     </>
   );
 };

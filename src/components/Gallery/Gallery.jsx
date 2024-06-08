@@ -13,22 +13,15 @@ function Gallery() {
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
       >
-        <div className="my-auto mx-auto w-full pt-32 text-primary-100">
+        <div className="my-auto mx-auto w-full pt-16 text-primary-100">
           <m.div
-            className="mx-auto max-w-screen-md text-center"
+            className="mx-auto text-center"
             variants={FezAnimations.container}
             initial="hidden"
             animate="show"
-          >
-            <h1 className="title-font mb-4 text-3xl font-medium text-white sm:text-4xl">
-              Gallery
-            </h1>
-            <p className="mb-8 text-center font-light text-gray-500 dark:text-gray-400 sm:text-xl lg:mb-16">
-              Some of my Stable Diffusion creations.
-            </p>
-          </m.div>
+          ></m.div>
           <m.div
-            className="grid w-full max-w-screen-lg grid-flow-row grid-cols-1 gap-4 md:mx-auto md:grid-cols-2 md:pb-16"
+            className="grid w-full grid-flow-row grid-cols-1 gap-4"
             variants={FezAnimations.container}
             initial="hidden"
             animate="show"

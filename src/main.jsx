@@ -2,6 +2,7 @@ import React, { useEffect, useLayoutEffect } from "react";
 import ReactDOM from "react-dom/client";
 import { BrowserRouter } from "react-router-dom";
 import "./index.css";
+import { MusicPlayerProvider } from "./components/Gallery/MusicPlayerContext";
 
 import AnimatedRoutes from "./pages/AnimatedRoutes";
 
@@ -42,4 +43,8 @@ export default function App() {
 }
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(<App />);
+root.render(
+  <MusicPlayerProvider>
+    <App />
+  </MusicPlayerProvider>
+);
