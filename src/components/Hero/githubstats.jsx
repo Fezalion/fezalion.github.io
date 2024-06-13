@@ -3,25 +3,49 @@ import { domAnimation, LazyMotion, m } from "framer-motion";
 import FezAnimations from "../animations";
 
 function GithubStars() {
-  const [stars, setStars] = React.useState(0);
-  const [followers, setFollowers] = React.useState(0);
-  const [publicRepos, setPublicRepos] = React.useState(0);
-  const [publicGists, setPublicGists] = React.useState(0);
+  const [data, setData] = React.useState({
+    followers: 0,
+    publicRepos: 0,
+    publicGists: 0,
+    stars: 0
+  });
 
   useEffect(() => {
-    fetch("https://api.github.com/users/Fezalion")
-      .then((res) => res.json())
-      .then((res) => {
-        setFollowers(res.followers);
-        setPublicRepos(res.public_repos);
-        setPublicGists(res.public_gists);
-      });
-    fetch("https://api.github.com/users/Fezalion/starred")
-      .then((res) => res.json())
-      .then((res) => {
-        setStars(res.length);
-      });
+    async function fetchGithubData() {
+      try {
+        // Fetch user data
+        const userResponse = await fetch("https://api.github.com/users/Fezalion");
+        const userData = await userResponse.json();
+        
+        // Fetch all starred repositories
+        let stars = 0;
+        let page = 1;
+        let perPage = 100; // Max per page is 100
+        let fetching = true;
+
+        while (fetching) {
+          const starredResponse = await fetch(`https://api.github.com/users/Fezalion/starred?page=${page}&per_page=${perPage}`);
+          const starredData = await starredResponse.json();
+          
+          stars += starredData.length;
+          fetching = starredData.length === perPage; // If less than perPage, we've reached the last page
+          page++;
+        }
+
+        setData({
+          followers: userData.followers,
+          publicRepos: userData.public_repos,
+          publicGists: userData.public_gists,
+          stars: stars
+        });
+      } catch (error) {
+        console.error("Failed to fetch GitHub data:", error);
+      }
+    }
+
+    fetchGithubData();
   }, []);
+
   return (
     <Suspense fallback={<></>}>
       <m.p
@@ -30,8 +54,7 @@ function GithubStars() {
         animate="show"
         variants={FezAnimations.itemDelay}
       >
-        I have {followers} Followers, {publicRepos} Repos, {publicGists} Gists
-        and {stars} Stars on Github!
+        I have {data.followers} Followers, {data.publicRepos} Repos, {data.publicGists} Gists and {data.stars} Stars on Github!
       </m.p>
     </Suspense>
   );
