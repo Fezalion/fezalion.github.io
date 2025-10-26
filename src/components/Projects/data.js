@@ -29,6 +29,16 @@ const data = [
     desc: "Dead project of mine, after powercord got decontinued I stopped developing it.",
     link: "https://github.com/powercord-community/owoifier",
   },
+  {
+    name: "FezOverlay",
+    desc: "An OBS Browser Source overlay for lastFM scrobbing and Emote display with 2d rigidbody, FFA arena mini-game for chat.",
+    link: "https://github.com/Fezalion/FezOverlay",
+  },
+  {
+    name: "FezLeaderboard",
+    desc: "A alternative leaderboard for Path of Exile 1 private leagues.",
+    link: "https://github.com/Fezalion/fezleaderboard",
+  },
 ];
 
 export default data;
