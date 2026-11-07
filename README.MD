@@ -1,13 +1,10 @@
-Shield: [![CC BY-NC-SA 4.0][cc-by-nc-sa-shield]][cc-by-nc-sa]
+# fezalion.xyz
 
-This work is licensed under a
-[Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License][cc-by-nc-sa].
+Terminal-themed homepage built with React + Vite.
 
-[![CC BY-NC-SA 4.0][cc-by-nc-sa-image]][cc-by-nc-sa]
+    npm install
+    npm run dev      # local dev server
+    npm run build    # outputs static files to dist/
 
-[cc-by-nc-sa]: http://creativecommons.org/licenses/by-nc-sa/4.0/
-[cc-by-nc-sa-image]: https://licensebuttons.net/l/by-nc-sa/4.0/88x31.png
-[cc-by-nc-sa-shield]: https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-lightgrey.svg
-
-# Fezalion.tech
-This is the code for my personal website, built with React using vite.
+To add a subdomain, edit the list in `src/subdomains.js`.
+Deploy the contents of `dist/` to your host.
